@@ -3929,19 +3929,27 @@ body.nav-open .site-header {
   position: relative;
   width: 100%;
   height: 280px;
-  min-height: 280px;
+  max-height: 280px;
+  align-self: start;
   border-radius: var(--radius-2xl);
   overflow: hidden;
   border: 1px solid rgba(198, 198, 205, 0.2);
   background: var(--surface-variant);
 }
 
-.page-contact .contact-map-iframe {
+.page-contact .contact-map-frame {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-contact .contact-map-iframe {
   display: block;
   width: 100%;
   height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   border: 0;
 }
 
@@ -4019,14 +4027,14 @@ body.nav-open .site-header {
   transform: scale(0.9);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .page-contact .contact-map {
     height: 260px;
-    min-height: 260px;
+    max-height: 260px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .page-contact .contact-hero h1 {
     font-size: clamp(28px, 4vw, 36px);
   }
@@ -4043,7 +4051,7 @@ body.nav-open .site-header {
 
   .page-contact .contact-map {
     height: 350px;
-    min-height: 350px;
+    max-height: 350px;
   }
 }
 
