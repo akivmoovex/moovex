@@ -4450,10 +4450,14 @@ body.nav-open .site-header {
     max-width: 40rem;
   }
 
-  /* D. About — editorial left rail (not centered column) */
+  /* D. About — editorial left rail inside centered site container */
   .page-about .about-hero-inner,
   .page-about .about-commitment-inner,
-  .page-about .about-mv-grid,
+  .page-about .about-mv-grid {
+    max-width: min(1120px, calc(100% - 32px));
+    margin-inline: auto;
+  }
+
   .page-about .about-do-list {
     max-width: 48rem;
     margin-inline: 0;
@@ -4687,13 +4691,13 @@ body.nav-open .site-header {
 
   .page-about .about-hero-inner,
   .page-about .about-commitment-inner,
-  .page-about .about-do-list {
-    max-width: var(--measure-wide);
-    margin-inline: 0;
+  .page-about .about-mv-grid {
+    max-width: min(1120px, calc(100% - 32px));
+    margin-inline: auto;
   }
 
-  .page-about .about-mv-grid {
-    max-width: none;
+  .page-about .about-do-list {
+    max-width: var(--measure-wide);
     margin-inline: 0;
   }
 
@@ -4842,10 +4846,15 @@ body.nav-open .site-header {
 }
 
 @media (min-width: 768px) {
-  /* About — editorial left rail (override centered-column conflict) */
+  /* About — editorial left rail inside centered site container */
   .page-about .about-hero-inner,
   .page-about .about-commitment-inner,
-  .page-about .about-mv-grid,
+  .page-about .about-mv-grid {
+    width: min(1120px, calc(100% - 32px));
+    max-width: min(1120px, calc(100% - 32px));
+    margin-inline: auto;
+  }
+
   .page-about .about-do-list {
     max-width: var(--measure-wide, 48rem);
     margin-inline: 0;
@@ -4854,10 +4863,6 @@ body.nav-open .site-header {
   .page-about .about-what-we-do .container {
     max-width: min(1120px, calc(100% - 32px));
     margin-inline: auto;
-  }
-
-  .page-about .about-do-list {
-    max-width: var(--measure-wide, 48rem);
   }
 
   .page-about .about-values-grid {
@@ -4978,5 +4983,44 @@ body.nav-open .site-header {
 @media (min-width: 1024px) {
   .page-ecosystem .eco-hub-stack {
     max-width: 960px;
+  }
+}
+
+/* About + Impact follow-up fixes */
+
+@media (min-width: 768px) {
+  /* About — restore standard site container gutters (containers are .about-*-inner) */
+  .page-about .about-hero-inner,
+  .page-about .about-commitment-inner,
+  .page-about .about-mv-grid {
+    width: min(1120px, calc(100% - 32px));
+    max-width: min(1120px, calc(100% - 32px));
+    margin-inline: auto;
+  }
+
+  .page-about .about-do-list {
+    max-width: var(--measure-wide, 48rem);
+    margin-inline: 0;
+  }
+
+  /* Impact — metric cards full container width like Partner why-cards */
+  .page-impact .impact-metrics-row {
+    max-width: none;
+    width: 100%;
+    gap: var(--gutter, 24px);
+  }
+
+  .page-impact .impact-metric-card {
+    padding: var(--gutter, 24px);
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-impact .impact-metric-card strong,
+  .page-impact .impact-metric-card .impact-metric-value {
+    font-size: clamp(28px, 3vw, 36px);
   }
 }
