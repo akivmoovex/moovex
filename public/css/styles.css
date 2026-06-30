@@ -3270,9 +3270,13 @@ body.nav-open .site-header {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 20px 40px rgba(30, 41, 59, 0.04);
-  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuZO6y9jWynCcvdinRGbVKRX1VP1ZugzfvNgb3rxENvB6CJARlQw8dFyJ9Xn0jc3nSK2Ah0PpMeXyJxgKWT7-qwAdjKEjxevzQuvu0evqajbCqni8C6zefFMy800Wl5y6QyZ5j2qevoJKMUJygL29TQM8Wmu3HP1UTynj8wbXaV-_kE_mjCjR8NV55paYgR97oTmuo_kqHs24RuzNPlxUoYNOODD3oO1WBKmrIS85Bbd2ytV21TSajxtfkaMJL8NGI01oFnmxApTg");
-  background-size: cover;
-  background-position: center;
+}
+
+.page-partner .partner-hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .page-partner .partner-hero-photo::after {
@@ -3923,58 +3927,18 @@ body.nav-open .site-header {
 
 .page-contact .contact-map {
   position: relative;
-  aspect-ratio: 16 / 9;
+  height: clamp(260px, 42vw, 360px);
   border-radius: var(--radius-2xl);
   overflow: hidden;
   border: 1px solid rgba(198, 198, 205, 0.2);
   background: var(--surface-variant);
 }
 
-.page-contact .contact-map-scene {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 40%, #86efac 100%);
-  opacity: 0.85;
-}
-
-.page-contact .contact-map-road {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.65);
-}
-
-.page-contact .contact-map-road-h {
-  top: 45%;
-  left: 0;
-  right: 0;
-  height: 12px;
-}
-
-.page-contact .contact-map-road-v {
-  top: 0;
-  bottom: 0;
-  left: 38%;
-  width: 10px;
-}
-
-.page-contact .contact-map-park {
-  position: absolute;
-  right: 12%;
-  bottom: 18%;
-  width: 28%;
-  height: 32%;
-  border-radius: 50%;
-  background: rgba(34, 197, 94, 0.35);
-}
-
-.page-contact .contact-map-pin {
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  width: 16px;
-  height: 16px;
-  border-radius: 50% 50% 50% 0;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  background: var(--trust-blue);
+.page-contact .contact-map-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .page-contact .contact-map-overlay {
