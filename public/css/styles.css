@@ -2760,61 +2760,13 @@ body.nav-open .site-header {
   inset: 0;
   opacity: 0.4;
   pointer-events: none;
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYADcT_jilPND8fHTB8bwJTgcMx-UpgkVaV8dVLq93MBtIy8q2nyJVzwkcRWs0Hmdm5OPBTHaUJ_OO73BDQOLcDX_McNSi6uA61qQtWqSQTPNxNmGnozqJsPPr17MVg3Gz5bNrUz0nmmYFHslOLA1QkD2UaKdio-dDjqBThn7q-yVDF_McDSw0vrb9TCL7IEuC55jH3tPH1d101Surl2pNQ5g95agPIFefsbavvOc90KmFLsjJFyHmQVANnuyY_Zga3ii3vhX5lWk");
+  background-size: cover;
+  background-position: center;
 }
 
 .page-impact .impact-hero-scene {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-}
-
-.page-impact .impact-hero-scene::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(30, 41, 59, 0.95) 0%, rgba(30, 41, 59, 0.4) 55%, rgba(251, 146, 60, 0.25) 100%);
-}
-
-.page-impact .impact-scene-sun {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fef3c7 0%, #fb923c 70%, transparent 100%);
-}
-
-.page-impact .impact-scene-stall {
-  position: absolute;
-  bottom: 0;
-  width: 72px;
-  height: 56px;
-  border-radius: 6px 6px 0 0;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.page-impact .impact-scene-stall-a {
-  left: 24px;
-  height: 64px;
-  background: rgba(251, 146, 60, 0.35);
-}
-
-.page-impact .impact-scene-stall-b {
-  left: 108px;
-  height: 48px;
-}
-
-.page-impact .impact-scene-skyline {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 140px;
-  height: 80px;
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.5) 0%, transparent 100%);
-  clip-path: polygon(100% 100%, 100% 40%, 85% 55%, 70% 30%, 55% 50%, 40% 25%, 25% 45%, 10% 35%, 0 50%, 0 100%);
+  display: none;
 }
 
 .page-impact .impact-hero-copy {
@@ -2891,7 +2843,8 @@ body.nav-open .site-header {
   place-items: center;
 }
 
-.page-impact .impact-metric-card strong {
+.page-impact .impact-metric-card strong,
+.page-impact .impact-metric-card .impact-metric-value {
   display: block;
   font-family: "Outfit", Arial, sans-serif;
   font-size: clamp(20px, 4.5vw, 28px);
@@ -2901,7 +2854,9 @@ body.nav-open .site-header {
   margin-bottom: 4px;
 }
 
-.page-impact .impact-metric-card span {
+.page-impact .impact-metric-card span,
+.page-impact .impact-metric-card .impact-metric-label {
+  display: block;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -2929,7 +2884,8 @@ body.nav-open .site-header {
   box-shadow: 0 4px 12px rgba(30, 41, 59, 0.08);
 }
 
-.page-impact .impact-feature-card > strong {
+.page-impact .impact-feature-card > strong,
+.page-impact .impact-feature-card > .impact-feature-value {
   display: block;
   font-family: "Outfit", Arial, sans-serif;
   font-size: clamp(24px, 5vw, 36px);
@@ -3008,35 +2964,13 @@ body.nav-open .site-header {
 .page-impact .impact-story-photo {
   height: 192px;
   overflow: hidden;
-  background: linear-gradient(135deg, #1e293b 0%, #006c49 50%, #6cf8bb 100%);
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOHhGoUbt1mhcz1GJLoLiXFcx_Zc65tK7y_frr1sxLMZ96-zBK2moyK7EPVpCyHjOa4kyI06QnowxZBfgQvWarK7ue93OxMEapO47ceD98NHhDhkjWeVM7-8E7VtkmnnIE7_wjfvpufyed6ctkPUd3fDgHq6PjnT5Bs9L6w4HUUdT9DPH_Mrk-e2DcU1QZ-uUg75g95AyP32wM8VGe9-pa6WoMEGeYe558SQLlTbuZhB0Y4ZU3781UZ1rdTCUGyQr5JOe60GGYDVM");
+  background-size: cover;
+  background-position: center;
 }
 
 .page-impact .impact-story-scene {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.page-impact .impact-story-figure {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 120px;
-  border-radius: 40px 40px 0 0;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.page-impact .impact-story-screen {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 96px;
-  height: 64px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: none;
 }
 
 .page-impact .impact-story-body {
@@ -3098,11 +3032,15 @@ body.nav-open .site-header {
   background: var(--surface-container-low);
   display: grid;
   place-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.page-impact .impact-story-avatar-fallback {
   font-family: "Outfit", Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: var(--secondary);
-  flex-shrink: 0;
+  color: var(--trust-blue);
 }
 
 .page-impact .impact-story-name {
@@ -3326,65 +3264,22 @@ body.nav-open .site-header {
   border-radius: var(--radius-2xl);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  background: linear-gradient(135deg, var(--surface-container-low) 0%, var(--secondary-container) 45%, var(--secondary) 100%);
+  box-shadow: 0 20px 40px rgba(30, 41, 59, 0.04);
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuZO6y9jWynCcvdinRGbVKRX1VP1ZugzfvNgb3rxENvB6CJARlQw8dFyJ9Xn0jc3nSK2Ah0PpMeXyJxgKWT7-qwAdjKEjxevzQuvu0evqajbCqni8C6zefFMy800Wl5y6QyZ5j2qevoJKMUJygL29TQM8Wmu3HP1UTynj8wbXaV-_kE_mjCjR8NV55paYgR97oTmuo_kqHs24RuzNPlxUoYNOODD3oO1WBKmrIS85Bbd2ytV21TSajxtfkaMJL8NGI01oFnmxApTg");
+  background-size: cover;
+  background-position: center;
 }
 
-.page-partner .partner-hero-scene {
-  position: absolute;
-  inset: 0;
-}
-
-.page-partner .partner-hero-scene::after {
+.page-partner .partner-hero-photo::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(30, 41, 59, 0.4) 0%, transparent 55%);
+  pointer-events: none;
 }
 
-.page-partner .partner-scene-window {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 72%;
-  height: 48%;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.35);
-  border: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-.page-partner .partner-scene-table {
-  position: absolute;
-  bottom: 18%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 64%;
-  height: 12%;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.page-partner .partner-scene-person {
-  position: absolute;
-  bottom: 28%;
-  width: 36px;
-  height: 48px;
-  border-radius: 18px 18px 4px 4px;
-  background: rgba(255, 255, 255, 0.85);
-}
-
-.page-partner .partner-scene-person-a {
-  left: 22%;
-}
-
-.page-partner .partner-scene-person-b {
-  left: 50%;
-  transform: translateX(-50%);
-  height: 52px;
-}
-
-.page-partner .partner-scene-person-c {
-  right: 22%;
+.page-partner .partner-hero-scene {
+  display: none;
 }
 
 /* Why Support */
