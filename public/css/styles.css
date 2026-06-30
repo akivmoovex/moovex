@@ -277,10 +277,35 @@ body.nav-open .site-header { z-index: 70; }
   }
   .nav-overlay { display: none !important; }
   .logo-text { display: none; }
-  .logo-sub { display: flex; }
-  .logo-sub strong { font-size: 20px; font-weight: 700; }
+  .logo-sub {
+    display: grid;
+    grid-template-columns: 42px minmax(0, max-content);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 2px;
+  }
+  .logo-sub strong {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .logo-sub small {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    margin-top: 0;
+    line-height: 1.2;
+  }
   .logo-sub::before {
     content: "M";
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
     width: 42px;
     height: 42px;
     border-radius: 14px;
@@ -4306,7 +4331,6 @@ textarea { min-height: 120px; resize: vertical; }
 .page-impact .impact-hero-copy,
 .page-impact .impact-intro,
 .page-impact .impact-stories-heading,
-.page-impact .impact-action-card,
 .page-contact .contact-hero,
 .page-contact .contact-community,
 .page-updates .updates-header { text-align: center; }
@@ -4335,6 +4359,19 @@ textarea { min-height: 120px; resize: vertical; }
 .page-partner .partner-form,
 .page-updates .updates-feed,
 .page-updates .updates-card { text-align: left; }
+
+/* Impact — Your Support in Action: editorial left */
+.page-impact .impact-action-card,
+.page-impact .impact-action-card h2,
+.page-impact .impact-action-list h4,
+.page-impact .impact-action-list p,
+.page-impact .impact-action-list li > div {
+  text-align: left;
+}
+
+.page-impact .impact-btn {
+  text-align: center;
+}
 
 /* Lead text rhythm */
 .page-about .about-lead,
