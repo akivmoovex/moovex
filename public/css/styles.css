@@ -4568,7 +4568,8 @@ body.nav-open .site-header {
 
 /* 6. Normalize Home section h2 sizing (not hero h1) */
 .page-home .home-ecosystem h2,
-.page-home .home-section-title {
+.page-home .home-section-title,
+.page-home .home-cta-card h2 {
   font-size: 24px;
   line-height: 32px;
 }
@@ -4594,4 +4595,53 @@ body.nav-open .site-header {
 .page-about .about-lead {
   font-size: 16px;
   line-height: 24px;
+}
+
+/* 10. Header alignment system — editorial left, showcase center */
+.page-home .home-hero-copy {
+  text-align: left;
+}
+
+.page-about .about-hero-inner,
+.page-about .about-commitment-inner,
+.page-about .about-what-we-do,
+.page-about .about-mv-grid {
+  text-align: left;
+}
+
+.page-ecosystem .eco-hero .container,
+.page-ecosystem .eco-definition-body {
+  text-align: left;
+}
+
+.page-portfolio .port-hero,
+.page-partner .partner-hero-inner,
+.page-impact .impact-hero-copy,
+.page-contact .contact-hero,
+.page-updates .updates-header {
+  text-align: center;
+}
+
+.page-home .home-mission-inner,
+.page-home .home-ecosystem-inner,
+.page-home .home-cta-card {
+  text-align: center;
+}
+
+.page-home .home-portfolio .home-section-title,
+.page-home .home-impact .home-section-title,
+.page-home .home-impact .home-section-title-light {
+  text-align: center;
+}
+
+.page-home .home-feature,
+.page-home .home-card {
+  text-align: left;
+}
+
+.page-contact .contact-form-section,
+.page-contact .contact-form-card,
+.page-updates .updates-feed,
+.page-updates .updates-card {
+  text-align: left;
 }
