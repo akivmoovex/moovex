@@ -4477,3 +4477,98 @@ body.nav-open .site-header {
     margin-inline: auto;
   }
 }
+
+/* Header and hero consistency pass */
+
+/* 1. Keep simple mobile branding until desktop nav (1101px) */
+@media (max-width: 1100px) {
+  .logo-text {
+    display: inline;
+  }
+
+  .logo-sub {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1101px) {
+  .logo-text {
+    display: none;
+  }
+
+  .logo-sub {
+    display: flex;
+  }
+
+  .logo-sub strong {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+/* 2. Reduce desktop nav crowding (1101px–1280px) */
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .main-nav {
+    gap: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    padding: 8px 9px;
+    font-size: 13px;
+  }
+}
+
+/* 3 & 7. Hero alignment + prevent alignment flips */
+.page-contact .contact-hero {
+  text-align: center;
+}
+
+.page-contact .contact-lead {
+  margin-inline: auto;
+}
+
+.page-updates .updates-container {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.page-updates .updates-header {
+  text-align: center;
+}
+
+.page-updates .updates-categories {
+  justify-content: center;
+}
+
+.page-home .home-ecosystem-inner {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.page-home .home-cta-card {
+  text-align: center;
+}
+
+/* 4. Reduce excessive top spacing (Contact & Updates) */
+.page-contact .contact-main {
+  padding-top: 32px;
+}
+
+.page-updates .updates-main {
+  padding-top: 32px;
+}
+
+/* 5. Home mobile hero height */
+@media (max-width: 767px) {
+  .page-home .home-hero {
+    min-height: 600px;
+  }
+}
+
+/* 6. Normalize Home section h2 sizing (not hero h1) */
+.page-home .home-ecosystem h2,
+.page-home .home-section-title {
+  font-size: 24px;
+  line-height: 32px;
+}
