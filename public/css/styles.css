@@ -701,6 +701,14 @@ textarea {
     opacity: 1;
     pointer-events: auto;
   }
+
+  .logo-text {
+    display: inline;
+  }
+
+  .logo-sub {
+    display: none !important;
+  }
 }
 
 body.nav-open .site-header {
@@ -746,11 +754,24 @@ body.nav-open .site-header {
   .main-nav {
     flex: 1;
     justify-content: flex-end;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .nav-overlay {
     display: none !important;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo-sub {
+    display: flex;
+  }
+
+  .logo-sub strong {
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
@@ -873,15 +894,12 @@ body.nav-open .site-header {
 }
 
 .page-home .home-section-title {
-  font-size: 28px;
-  line-height: 36px;
   font-weight: 600;
   margin: 0 0 40px;
 }
 
 .page-home .home-section-title-light {
   color: #fff;
-  text-align: center;
   margin-bottom: 48px;
 }
 
@@ -1013,10 +1031,6 @@ body.nav-open .site-header {
 }
 
 .page-home .home-hero-copy h1 {
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
   margin: 0 0 24px;
 }
 
@@ -1132,7 +1146,6 @@ body.nav-open .site-header {
 .page-home .home-mission-inner {
   max-width: 28rem;
   margin: 0 auto;
-  text-align: center;
 }
 
 .page-home .home-mission h2 {
@@ -1164,8 +1177,6 @@ body.nav-open .site-header {
 }
 
 .page-home .home-ecosystem h2 {
-  font-size: 28px;
-  line-height: 36px;
   margin: 0 0 24px;
 }
 
@@ -1444,11 +1455,6 @@ body.nav-open .site-header {
     align-items: center;
   }
 
-  .page-home .home-hero-copy h1 {
-    font-size: clamp(28px, 4vw, 36px);
-    line-height: 36px;
-  }
-
   .page-home .home-hero-actions {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1510,8 +1516,6 @@ body.nav-open .site-header {
 
 .page-about .about-lead {
   margin: 0;
-  font-size: 18px;
-  line-height: 28px;
   color: var(--on-surface-variant);
 }
 
@@ -1542,10 +1546,6 @@ body.nav-open .site-header {
 }
 
 .page-about .about-hero h1 {
-  font-size: clamp(36px, 8vw, 48px);
-  line-height: 56px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
   margin: 0 0 16px;
 }
 
@@ -1688,7 +1688,6 @@ body.nav-open .site-header {
 }
 
 .page-about .about-values h2 {
-  text-align: center;
   font-size: 24px;
   line-height: 32px;
   margin: 0 0 48px;
@@ -2020,7 +2019,6 @@ body.nav-open .site-header {
 }
 
 .page-ecosystem .eco-hub-heading {
-  text-align: center;
   margin-bottom: var(--stack-lg);
 }
 
@@ -2323,7 +2321,6 @@ body.nav-open .site-header {
 
 .page-portfolio .port-hero {
   padding: var(--stack-lg) 0 40px;
-  text-align: center;
 }
 
 .page-portfolio .port-hero-inner {
@@ -2729,7 +2726,6 @@ body.nav-open .site-header {
 .page-impact .impact-hero-copy {
   position: relative;
   z-index: 1;
-  text-align: center;
   max-width: var(--measure-narrow);
   margin-inline: auto;
   width: 100%;
@@ -2746,7 +2742,6 @@ body.nav-open .site-header {
 /* Intro */
 .page-impact .impact-intro {
   padding: 40px 0;
-  text-align: center;
 }
 
 .page-impact .impact-intro h2 {
@@ -2913,7 +2908,6 @@ body.nav-open .site-header {
 }
 
 .page-impact .impact-stories-heading {
-  text-align: center;
   margin-bottom: 32px;
 }
 
@@ -3145,12 +3139,6 @@ body.nav-open .site-header {
   .page-impact .impact-metric-card .impact-metric-value {
     font-size: clamp(28px, 3vw, 36px);
   }
-
-  .page-impact .impact-intro,
-  .page-impact .impact-stories-heading,
-  .page-impact .impact-action-card h2 {
-    text-align: center;
-  }
 }
 
 /* Page: Page8 */
@@ -3198,7 +3186,6 @@ body.nav-open .site-header {
 }
 
 .page-partner .partner-hero-inner {
-  text-align: center;
   max-width: 36rem;
   margin: 0 auto var(--stack-lg);
 }
@@ -3246,7 +3233,6 @@ body.nav-open .site-header {
 }
 
 .page-partner .partner-why h2 {
-  text-align: center;
   font-size: 24px;
   line-height: 32px;
   margin: 0 0 var(--stack-lg);
@@ -3305,7 +3291,6 @@ body.nav-open .site-header {
 }
 
 .page-partner .partner-impact-areas h2 {
-  text-align: center;
   font-size: 24px;
   line-height: 32px;
   margin: 0 0 var(--stack-lg);
@@ -3393,7 +3378,6 @@ body.nav-open .site-header {
 }
 
 .page-partner .partner-form-intro {
-  text-align: center;
   max-width: 28rem;
   margin: 0 auto var(--stack-lg);
 }
@@ -3563,7 +3547,6 @@ body.nav-open .site-header {
 .page-partner .partner-donate-card {
   position: relative;
   overflow: hidden;
-  text-align: center;
   padding: var(--stack-lg) var(--gutter);
   border-radius: var(--radius-2xl);
   background: var(--surface-container-high);
@@ -3914,6 +3897,7 @@ body.nav-open .site-header {
 .page-contact .contact-community-links {
   display: flex;
   gap: var(--stack-md);
+  justify-content: center;
 }
 
 .page-contact .contact-community-btn {
@@ -3941,7 +3925,7 @@ body.nav-open .site-header {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .page-contact .contact-hero h1 {
     font-size: clamp(28px, 4vw, 36px);
   }
@@ -4300,37 +4284,9 @@ body.nav-open .site-header {
 
 
 /* --------------------------------------------------------------------------
-   5. Desktop layout system
+   Moovex layout system
+   Alignment, hero bands, measures, and desktop rhythm.
    -------------------------------------------------------------------------- */
-/* A. Header — logo at 1101px (matches desktop nav drawer breakpoint) */
-@media (max-width: 1100px) {
-  .logo-text {
-    display: inline;
-  }
-
-  .logo-sub {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1101px) {
-  .logo-text {
-    display: none;
-  }
-
-  .logo-sub {
-    display: flex;
-  }
-
-  .logo-sub strong {
-    font-size: 20px;
-    font-weight: 700;
-  }
-
-  .main-nav {
-    flex-wrap: nowrap;
-  }
-}
 
 @media (min-width: 1101px) and (max-width: 1280px) {
   .main-nav {
@@ -4343,36 +4299,32 @@ body.nav-open .site-header {
   }
 }
 
-/* B. Mobile-only page tweaks */
 @media (max-width: 767px) {
   .page-home .home-hero {
     min-height: 600px;
   }
 }
 
-/* C. Alignment map — editorial left vs showcase center */
-.page-home .home-hero-copy {
-  text-align: left;
-}
+/* Alignment — editorial left vs showcase center (all viewports) */
 
+/* About — editorial left rail */
 .page-about .about-hero-inner,
 .page-about .about-commitment-inner,
+.page-about .about-mv-grid,
 .page-about .about-what-we-do,
-.page-about .about-mv-grid {
+.page-about .about-values {
   text-align: left;
 }
 
-.page-portfolio .port-hero,
-.page-partner .partner-hero-inner,
-.page-impact .impact-hero-copy,
-.page-contact .contact-hero,
-.page-updates .updates-header {
-  text-align: center;
+/* Home — hero left, section titles centered */
+.page-home .home-hero-copy {
+  text-align: left;
 }
 
 .page-home .home-mission-inner,
 .page-home .home-ecosystem-inner,
 .page-home .home-cta-card,
+.page-home .home-section-title,
 .page-home .home-portfolio .home-section-title,
 .page-home .home-impact .home-section-title,
 .page-home .home-impact .home-section-title-light {
@@ -4384,11 +4336,39 @@ body.nav-open .site-header {
   text-align: left;
 }
 
-.page-contact .contact-form-section,
-.page-contact .contact-form-card,
-.page-updates .updates-feed,
-.page-updates .updates-card {
-  text-align: left;
+/* Showcase pages — centered heroes and major section headings */
+.page-ecosystem .eco-hero .container,
+.page-ecosystem .eco-definition-body,
+.page-ecosystem .eco-hub-heading,
+.page-portfolio .port-hero,
+.page-partner .partner-hero-inner,
+.page-partner .partner-why,
+.page-partner .partner-impact-areas,
+.page-partner .partner-form-intro,
+.page-partner .partner-donate-card,
+.page-impact .impact-hero-copy,
+.page-impact .impact-intro,
+.page-impact .impact-stories-heading,
+.page-impact .impact-action-card,
+.page-contact .contact-hero,
+.page-contact .contact-community,
+.page-updates .updates-header {
+  text-align: center;
+}
+
+.page-ecosystem .eco-hero h1,
+.page-ecosystem .eco-lead {
+  max-width: var(--measure-narrow);
+  margin-inline: auto;
+}
+
+.page-ecosystem .eco-definition-body {
+  max-width: var(--measure-narrow);
+  margin-inline: auto;
+}
+
+.page-ecosystem .eco-benefit-heading {
+  justify-content: center;
 }
 
 .page-contact .contact-lead {
@@ -4400,10 +4380,6 @@ body.nav-open .site-header {
   text-align: center;
 }
 
-.page-updates .updates-header {
-  text-align: center;
-}
-
 .page-updates .updates-categories {
   justify-content: center;
 }
@@ -4412,7 +4388,15 @@ body.nav-open .site-header {
   margin-inline: auto;
 }
 
-/* D. Shared typography rhythm */
+/* Form and card body copy stays left-aligned inside centered pages */
+.page-contact .contact-form-section,
+.page-contact .contact-form-card,
+.page-updates .updates-feed,
+.page-updates .updates-card {
+  text-align: left;
+}
+
+/* Shared typography rhythm */
 .page-home .home-ecosystem h2,
 .page-home .home-section-title,
 .page-home .home-cta-card h2 {
@@ -4455,34 +4439,16 @@ body.nav-open .site-header {
   .page-home .home-mission-inner,
   .page-home .home-ecosystem-inner {
     max-width: var(--measure-wide);
-    text-align: center;
   }
 
   .page-home .home-cta-card {
     max-width: var(--measure-wide);
-    text-align: center;
   }
 
-  /* Ecosystem — showcase template */
-  .page-ecosystem .eco-hero .container {
-    text-align: center;
-  }
-
-  .page-ecosystem .eco-hero h1,
-  .page-ecosystem .eco-lead {
-    max-width: var(--measure-narrow);
-    margin-inline: auto;
-  }
-
+  /* Ecosystem — showcase spacing and bands */
   .page-ecosystem .eco-hero {
     padding: var(--page-hero-padding) 0;
     background: var(--hero-band-bg);
-  }
-
-  .page-ecosystem .eco-definition-body {
-    text-align: center;
-    max-width: var(--measure-narrow);
-    margin-inline: auto;
   }
 
   .page-ecosystem .eco-definition-body p {
@@ -4492,10 +4458,6 @@ body.nav-open .site-header {
 
   .page-ecosystem .eco-definition-note {
     justify-content: center;
-  }
-
-  .page-ecosystem .eco-hub-heading {
-    text-align: center;
   }
 
   .page-ecosystem .eco-hub-stack {
@@ -4508,15 +4470,10 @@ body.nav-open .site-header {
     margin-inline: auto;
   }
 
-  .page-ecosystem .eco-benefit-heading {
-    justify-content: center;
-  }
-
-  /* Portfolio — centered hero */
+  /* Portfolio — centered hero band */
   .page-portfolio .port-hero {
     padding: var(--page-hero-padding) 0;
     background: var(--hero-band-bg);
-    text-align: center;
   }
 
   .page-portfolio .port-hero-inner {
@@ -4538,7 +4495,6 @@ body.nav-open .site-header {
   .page-partner .partner-hero-inner {
     max-width: var(--measure-narrow);
     margin-inline: auto;
-    text-align: center;
   }
 
   .page-partner .partner-lead {
@@ -4562,7 +4518,6 @@ body.nav-open .site-header {
   .page-contact .contact-hero {
     padding: var(--page-hero-padding) 0;
     background: var(--hero-band-bg);
-    text-align: center;
   }
 
   .page-contact .contact-lead,
@@ -4579,7 +4534,6 @@ body.nav-open .site-header {
   .page-updates .updates-container {
     max-width: var(--measure-narrow);
     margin-inline: auto;
-    text-align: center;
   }
 
   .page-updates .updates-header {
@@ -4587,7 +4541,6 @@ body.nav-open .site-header {
     margin-bottom: var(--stack-lg);
     background: var(--hero-band-bg);
     border-radius: var(--radius-2xl);
-    text-align: center;
   }
 
   /* Impact — hero spacing */
@@ -4601,8 +4554,11 @@ body.nav-open .site-header {
   .page-home .home-cta-card h2,
   .page-home .home-mission h2,
   .page-ecosystem .eco-hub-heading h2,
+  .page-ecosystem .eco-definition-card h2,
   .page-partner .partner-why h2,
-  .page-partner .partner-impact-areas h2 {
+  .page-partner .partner-impact-areas h2,
+  .page-impact .impact-intro h2,
+  .page-impact .impact-stories-heading h2 {
     font-size: 24px;
     line-height: 32px;
   }
