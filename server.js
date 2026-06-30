@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const site = {
-  name: "Moovex",
+  name: "moovex",
   domain: "moovex.org",
   tagline: "Promoting entrepreneurship in Zambia",
 };
@@ -62,19 +62,19 @@ function partnerFormValues(body) {
   };
 }
 
-app.get("/", renderPage("home", "Moovex | Building Zambia's Entrepreneurship Ecosystem", "home"));
-app.get("/about", renderPage("about", "About Moovex", "about"));
-app.get("/ecosystem", renderPage("ecosystem", "The Moovex Ecosystem", "ecosystem"));
-app.get("/portfolio", renderPage("portfolio", "Moovex Portfolio", "portfolio"));
+app.get("/", renderPage("home", "moovex | Building Zambia's Entrepreneurship Ecosystem", "home"));
+app.get("/about", renderPage("about", "About moovex", "about"));
+app.get("/ecosystem", renderPage("ecosystem", "The moovex Ecosystem", "ecosystem"));
+app.get("/portfolio", renderPage("portfolio", "moovex Portfolio", "portfolio"));
 app.get("/impact", renderPage("impact", "Our Impact", "impact"));
-app.get("/updates", renderPage("updates", "Updates | Moovex Zambia", "updates"));
+app.get("/updates", renderPage("updates", "Updates | moovex Zambia", "updates"));
 if (process.env.NODE_ENV !== "production") {
   app.get("/stitch-reference", renderPage("stitch-reference", "Stitch Reference", ""));
 }
 
 app.get("/contact", (req, res) => {
   res.render("pages/contact", {
-    title: "Contact Moovex",
+    title: "Contact moovex",
     site,
     activePage: "contact",
     sent: req.query.sent === "true",
@@ -85,7 +85,7 @@ app.get("/contact", (req, res) => {
 
 app.get("/partner", (req, res) => {
   res.render("pages/partner", {
-    title: "Partner With Moovex",
+    title: "Partner With moovex",
     site,
     activePage: "partner",
     sent: req.query.sent === "true",
@@ -99,7 +99,7 @@ app.post("/contact", async (req, res) => {
 
   if (!isFormValid(form)) {
     return res.status(400).render("pages/contact", {
-      title: "Contact Moovex",
+      title: "Contact moovex",
       site,
       activePage: "contact",
       sent: false,
@@ -120,7 +120,7 @@ app.post("/contact", async (req, res) => {
   } catch (err) {
     console.error("Contact form email failed:", err.message);
     res.status(500).render("pages/contact", {
-      title: "Contact Moovex",
+      title: "Contact moovex",
       site,
       activePage: "contact",
       sent: false,
@@ -135,7 +135,7 @@ app.post("/partner", async (req, res) => {
 
   if (!isFormValid(form)) {
     return res.status(400).render("pages/partner", {
-      title: "Partner With Moovex",
+      title: "Partner With moovex",
       site,
       activePage: "partner",
       sent: false,
@@ -157,7 +157,7 @@ app.post("/partner", async (req, res) => {
   } catch (err) {
     console.error("Partner form email failed:", err.message);
     res.status(500).render("pages/partner", {
-      title: "Partner With Moovex",
+      title: "Partner With moovex",
       site,
       activePage: "partner",
       sent: false,
