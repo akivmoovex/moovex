@@ -1,24 +1,75 @@
+/* ==========================================================================
+   Moovex Design System
+   Single source of truth for layout, tokens, and page styling.
+   Markup lives in views/ — do not change class names without updating EJS.
+   ========================================================================== */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap");
 
+/* --------------------------------------------------------------------------
+   1. Design tokens
+   -------------------------------------------------------------------------- */
 :root {
+  /* Brand */
   --blue: #12355b;
   --blue-dark: #08233f;
   --green: #2fbf71;
   --orange: #f59e0b;
-  --soft: #f4f8f6;
-  --text: #1d2939;
-  --muted: #667085;
-  --white: #ffffff;
-  --border: #e4e7ec;
   --trust-blue: #1e293b;
   --growth-green: #22c55e;
-  --surface: #f8f9ff;
-  --on-surface-variant: #45464d;
+  --energy-orange: #fb923c;
   --secondary: #006c49;
   --secondary-container: #6cf8bb;
   --on-secondary-container: #00714d;
+
+  /* Surfaces */
+  --white: #ffffff;
+  --soft: #f4f8f6;
+  --surface: #f8f9ff;
+  --surface-alt: #f8fafc;
   --surface-container: #e5eeff;
+  --surface-container-low: #eff4ff;
+  --surface-container-high: #dce9ff;
+  --surface-container-highest: #d3e4fe;
+  --surface-variant: #d3e4fe;
+  --hero-band-bg: #f8fafc;
+  --card-border: #f1f5f9;
+
+  /* Text */
+  --text: #1d2939;
+  --muted: #667085;
+  --on-surface: #0b1c30;
+  --on-surface-variant: #45464d;
+  --on-primary-fixed: #131b2e;
+
+  /* UI */
+  --border: #e4e7ec;
+  --outline-variant: #c6c6cd;
+
+  /* Layout */
+  --layout-max: 1120px;
+  --measure-narrow: 42rem;
+  --measure-wide: 48rem;
+  --page-hero-padding: 48px;
+  --page-section-gap: 80px;
+  --section-gap: 80px;
+  --stack-md: 16px;
+  --stack-lg: 32px;
+  --gutter: 24px;
+  --margin-mobile: 16px;
+
+  /* Radius */
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 1.875rem;
 }
+
+/* --------------------------------------------------------------------------
+   2. Base
+   -------------------------------------------------------------------------- */
+
+/* Layout shell + legacy reference styles */
 
 * { box-sizing: border-box; }
 
@@ -38,7 +89,7 @@ body.nav-open {
 a { color: inherit; text-decoration: none; }
 
 .container {
-  width: min(1120px, calc(100% - 32px));
+  width: min(var(--layout-max), calc(100% - 32px));
   margin: 0 auto;
 }
 
@@ -676,14 +727,6 @@ body.nav-open .site-header {
     gap: 24px;
   }
 
-  .logo-text {
-    display: none;
-  }
-
-  .logo-sub {
-    display: flex;
-  }
-
   .logo-sub::before {
     content: "M";
     width: 42px;
@@ -750,37 +793,44 @@ body.nav-open .site-header {
   }
 }
 
-/* Homepage — Stitch 01-home-mobile (scoped to .page-home) */
-.page-home {
-  --trust-blue: #1e293b;
-  --growth-green: #22c55e;
-  --energy-orange: #fb923c;
-  --surface: #f8f9ff;
-  --surface-alt: #f8fafc;
-  --surface-container-low: #eff4ff;
-  --on-surface-variant: #45464d;
-  --secondary: #006c49;
-  --secondary-container: #6cf8bb;
-  --on-secondary-container: #00714d;
-  --outline-variant: #c6c6cd;
-  --card-border: #f1f5f9;
-  --margin-mobile: 16px;
-  --section-gap: 80px;
-  --stack-lg: 32px;
-  --radius-2xl: 1.5rem;
-  --radius-lg: 0.5rem;
+
+/* --------------------------------------------------------------------------
+   3. Page shell — shared typography and canvas for all routes
+   -------------------------------------------------------------------------- */
+.page-home,
+.page-about,
+.page-ecosystem,
+.page-portfolio,
+.page-impact,
+.page-partner,
+.page-contact,
+.page-updates {
   font-family: "Inter", Arial, sans-serif;
   background: var(--surface);
   color: var(--trust-blue);
 }
 
-.page-home h1,
-.page-home h2,
-.page-home h3 {
+.page-contact {
+  color: var(--on-surface);
+}
+
+.page-home h1, .page-home h2, .page-home h3,
+.page-about h1, .page-about h2, .page-about h3, .page-about h4,
+.page-ecosystem h1, .page-ecosystem h2, .page-ecosystem h3, .page-ecosystem h4,
+.page-portfolio h1, .page-portfolio h2,
+.page-impact h1, .page-impact h2, .page-impact h3, .page-impact h4,
+.page-partner h1, .page-partner h2, .page-partner h3,
+.page-contact h1, .page-contact h2,
+.page-updates .updates-header h1,
+.page-updates .updates-card h2 {
   font-family: "Outfit", Arial, sans-serif;
   color: var(--trust-blue);
 }
 
+/* --------------------------------------------------------------------------
+   4. Pages
+   -------------------------------------------------------------------------- */
+/* Page: Home */
 .page-home .home-main {
   overflow-x: hidden;
 }
@@ -1099,7 +1149,7 @@ body.nav-open .site-header {
   color: var(--on-surface-variant);
 }
 
-/* Ecosystem */
+/* Page: About */
 .page-home .home-ecosystem {
   padding: var(--section-gap) 0;
   background: var(--surface-alt);
@@ -1166,7 +1216,7 @@ body.nav-open .site-header {
   line-height: 1.5;
 }
 
-/* Portfolio cards */
+/* Page: Ecosystem */
 .page-home .home-portfolio {
   padding: var(--section-gap) 0;
   background: #fff;
@@ -1293,7 +1343,7 @@ body.nav-open .site-header {
   color: var(--trust-blue);
 }
 
-/* Impact metrics band */
+/* Page: Portfolio */
 .page-home .home-impact {
   padding: 96px 0;
   background: var(--trust-blue);
@@ -1383,7 +1433,7 @@ body.nav-open .site-header {
 @media (min-width: 768px) {
   .page-home .home-hero {
     min-height: auto;
-    padding: 48px 0 88px;
+    padding: var(--page-hero-padding) 0 60px;
   }
 
   .page-home .home-hero-inner {
@@ -1395,8 +1445,8 @@ body.nav-open .site-header {
   }
 
   .page-home .home-hero-copy h1 {
-    font-size: clamp(28px, 4vw, 48px);
-    line-height: 1.15;
+    font-size: clamp(28px, 4vw, 36px);
+    line-height: 36px;
   }
 
   .page-home .home-hero-actions {
@@ -1414,7 +1464,7 @@ body.nav-open .site-header {
 
   .page-home .home-mission-inner,
   .page-home .home-ecosystem-inner {
-    max-width: 40rem;
+    max-width: var(--measure-wide);
   }
 
   .page-home .home-ecosystem-inner {
@@ -1432,7 +1482,7 @@ body.nav-open .site-header {
   }
 
   .page-home .home-cta-card {
-    max-width: 48rem;
+    max-width: var(--measure-wide);
     padding: 40px;
   }
 
@@ -1448,37 +1498,7 @@ body.nav-open .site-header {
   }
 }
 
-/* About page — Stitch 02-about-mobile (scoped to .page-about) */
-.page-about {
-  --trust-blue: #1e293b;
-  --growth-green: #22c55e;
-  --energy-orange: #fb923c;
-  --surface: #f8f9ff;
-  --surface-alt: #f8fafc;
-  --surface-container-low: #eff4ff;
-  --surface-container-high: #dce9ff;
-  --on-surface-variant: #45464d;
-  --secondary: #006c49;
-  --secondary-container: #6cf8bb;
-  --stack-lg: 32px;
-  --gutter: 24px;
-  --section-gap: 80px;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1.5rem;
-  --radius-lg: 0.5rem;
-  font-family: "Inter", Arial, sans-serif;
-  background: var(--surface);
-  color: var(--trust-blue);
-}
-
-.page-about h1,
-.page-about h2,
-.page-about h3,
-.page-about h4 {
-  font-family: "Outfit", Arial, sans-serif;
-  color: var(--trust-blue);
-}
-
+/* Page: Impact */
 .page-about .about-main {
   overflow-x: hidden;
 }
@@ -1843,28 +1863,45 @@ body.nav-open .site-header {
 
 @media (min-width: 768px) {
   .page-about .about-hero {
-    padding: 48px 0 var(--stack-lg);
+    padding: var(--page-hero-padding) 0 var(--stack-lg);
+    background: var(--hero-band-bg);
+  }
+
+  .page-about .about-hero-inner,
+  .page-about .about-commitment-inner,
+  .page-about .about-mv-grid {
+    width: min(var(--layout-max), calc(100% - 32px));
+    max-width: min(var(--layout-max), calc(100% - 32px));
+    margin-inline: auto;
   }
 
   .page-about .about-commitment,
   .page-about .about-mission-vision,
   .page-about .about-what-we-do {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: var(--page-hero-padding);
+    padding-bottom: var(--page-hero-padding);
   }
 
   .page-about .about-mv-grid {
-    max-width: none;
+    max-width: min(var(--layout-max), calc(100% - 32px));
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gutter);
   }
 
+  .page-about .about-card h3 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+
   .page-about .about-do-list {
-    max-width: 42rem;
+    max-width: var(--measure-wide);
+    margin-inline: 0;
   }
 
   .page-about .about-values-grid {
-    max-width: 42rem;
+    max-width: var(--measure-wide);
+    margin-inline: auto;
     gap: var(--gutter);
   }
 
@@ -1873,35 +1910,7 @@ body.nav-open .site-header {
   }
 }
 
-/* Ecosystem page — Stitch 03-ecosystem-mobile (scoped to .page-ecosystem) */
-.page-ecosystem {
-  --trust-blue: #1e293b;
-  --growth-green: #22c55e;
-  --energy-orange: #fb923c;
-  --surface: #f8f9ff;
-  --surface-container-low: #eff4ff;
-  --on-surface-variant: #45464d;
-  --secondary: #006c49;
-  --secondary-container: #6cf8bb;
-  --on-secondary-container: #00714d;
-  --stack-lg: 32px;
-  --gutter: 24px;
-  --section-gap: 80px;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1.5rem;
-  font-family: "Inter", Arial, sans-serif;
-  background: var(--surface);
-  color: var(--trust-blue);
-}
-
-.page-ecosystem h1,
-.page-ecosystem h2,
-.page-ecosystem h3,
-.page-ecosystem h4 {
-  font-family: "Outfit", Arial, sans-serif;
-  color: var(--trust-blue, #1e293b);
-}
-
+/* Page: Partner */
 .page-ecosystem .eco-soft-shadow {
   box-shadow: 0 20px 40px -10px rgba(30, 41, 59, 0.05);
 }
@@ -2294,10 +2303,6 @@ body.nav-open .site-header {
     font-size: clamp(28px, 4vw, 36px);
   }
 
-  .page-ecosystem .eco-hub-stack {
-    max-width: 640px;
-  }
-
   .page-ecosystem .eco-benefits-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2306,31 +2311,7 @@ body.nav-open .site-header {
   }
 }
 
-/* Portfolio page — Stitch 04-portfolio-mobile (scoped to .page-portfolio) */
-.page-portfolio {
-  --trust-blue: #1e293b;
-  --growth-green: #22c55e;
-  --energy-orange: #fb923c;
-  --surface: #f8f9ff;
-  --surface-container-low: #eff4ff;
-  --on-surface-variant: #45464d;
-  --secondary: #006c49;
-  --outline-variant: #c6c6cd;
-  --stack-lg: 32px;
-  --gutter: 24px;
-  --radius-lg: 0.5rem;
-  --radius-2xl: 1.5rem;
-  font-family: "Inter", Arial, sans-serif;
-  background: var(--surface);
-  color: var(--trust-blue);
-}
-
-.page-portfolio h1,
-.page-portfolio h2 {
-  font-family: "Outfit", Arial, sans-serif;
-  color: var(--trust-blue);
-}
-
+/* Page: Contact */
 .page-portfolio .port-soft-shadow {
   box-shadow: 0 1px 3px rgba(30, 41, 59, 0.06);
 }
@@ -2687,36 +2668,7 @@ body.nav-open .site-header {
   }
 }
 
-/* Impact page — Stitch 05-impact-mobile (scoped to .page-impact) */
-.page-impact {
-  --trust-blue: #1e293b;
-  --growth-green: #22c55e;
-  --energy-orange: #fb923c;
-  --surface: #f8f9ff;
-  --surface-alt: #f8fafc;
-  --surface-container-low: #eff4ff;
-  --on-surface-variant: #45464d;
-  --secondary: #006c49;
-  --outline-variant: #c6c6cd;
-  --stack-lg: 32px;
-  --gutter: 24px;
-  --section-gap: 80px;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1.5rem;
-  --radius-3xl: 1.875rem;
-  font-family: "Inter", Arial, sans-serif;
-  background: var(--surface);
-  color: var(--trust-blue);
-}
-
-.page-impact h1,
-.page-impact h2,
-.page-impact h3,
-.page-impact h4 {
-  font-family: "Outfit", Arial, sans-serif;
-  color: var(--trust-blue);
-}
-
+/* Page: Updates */
 .page-impact .impact-main {
   overflow-x: hidden;
   padding-bottom: var(--stack-lg);
@@ -2735,7 +2687,7 @@ body.nav-open .site-header {
 }
 
 .page-impact .impact-lead {
-  margin: 0;
+  margin: 0 auto;
   max-width: 20rem;
   font-size: 16px;
   line-height: 24px;
@@ -2777,6 +2729,10 @@ body.nav-open .site-header {
 .page-impact .impact-hero-copy {
   position: relative;
   z-index: 1;
+  text-align: center;
+  max-width: var(--measure-narrow);
+  margin-inline: auto;
+  width: 100%;
 }
 
 .page-impact .impact-hero-card h1 {
@@ -3158,7 +3114,7 @@ body.nav-open .site-header {
 
 @media (min-width: 768px) {
   .page-impact .impact-hero {
-    padding: 40px 0 var(--stack-lg);
+    padding: var(--page-hero-padding) 0 var(--stack-lg);
   }
 
   .page-impact .impact-hero-card {
@@ -3171,46 +3127,33 @@ body.nav-open .site-header {
   }
 
   .page-impact .impact-metrics-row {
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: none;
+    width: 100%;
+    gap: var(--gutter, 24px);
+  }
+
+  .page-impact .impact-metric-card {
+    padding: var(--gutter, 24px);
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-impact .impact-metric-card strong,
+  .page-impact .impact-metric-card .impact-metric-value {
+    font-size: clamp(28px, 3vw, 36px);
+  }
+
+  .page-impact .impact-intro,
+  .page-impact .impact-stories-heading,
+  .page-impact .impact-action-card h2 {
+    text-align: center;
   }
 }
 
-/* Partner page — Stitch 06-partner-donate-mobile (scoped to .page-partner) */
-.page-partner {
-  --trust-blue: #1e293b;
-  --growth-green: #22c55e;
-  --energy-orange: #fb923c;
-  --surface: #f8f9ff;
-  --surface-alt: #f8fafc;
-  --surface-container: #e5eeff;
-  --surface-container-low: #eff4ff;
-  --surface-container-high: #dce9ff;
-  --on-surface-variant: #45464d;
-  --secondary: #006c49;
-  --secondary-container: #6cf8bb;
-  --on-secondary-container: #00714d;
-  --outline-variant: #c6c6cd;
-  --on-primary-fixed: #131b2e;
-  --stack-md: 16px;
-  --stack-lg: 32px;
-  --section-gap: 80px;
-  --gutter: 24px;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1.5rem;
-  font-family: "Inter", Arial, sans-serif;
-  background: var(--surface);
-  color: var(--trust-blue);
-}
-
-.page-partner h1,
-.page-partner h2,
-.page-partner h3 {
-  font-family: "Outfit", Arial, sans-serif;
-  color: var(--trust-blue);
-}
-
+/* Page: Page8 */
 .page-partner .partner-main {
   overflow-x: hidden;
   padding-bottom: var(--section-gap);
@@ -3701,39 +3644,7 @@ body.nav-open .site-header {
   }
 }
 
-/* Contact page — Stitch 07-contact-mobile (scoped to .page-contact) */
-.page-contact {
-  --trust-blue: #1e293b;
-  --growth-green: #22c55e;
-  --surface: #f8f9ff;
-  --surface-alt: #f8fafc;
-  --surface-container-low: #eff4ff;
-  --surface-container-highest: #d3e4fe;
-  --surface-variant: #d3e4fe;
-  --on-surface: #0b1c30;
-  --on-surface-variant: #45464d;
-  --secondary: #006c49;
-  --secondary-container: #6cf8bb;
-  --on-secondary-container: #00714d;
-  --outline-variant: #c6c6cd;
-  --stack-md: 16px;
-  --stack-lg: 32px;
-  --section-gap: 80px;
-  --gutter: 24px;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1.5rem;
-  font-family: "Inter", Arial, sans-serif;
-  background: var(--surface);
-  color: var(--on-surface);
-}
-
-.page-contact h1,
-.page-contact h2 {
-  font-family: "Outfit", Arial, sans-serif;
-  color: var(--trust-blue);
-}
-
+/* Page: Page9 */
 .page-contact .contact-main {
   overflow-x: hidden;
   padding: 96px 0 64px;
@@ -3871,7 +3782,7 @@ body.nav-open .site-header {
   transform: scale(0.95);
 }
 
-/* Contact details & map */
+/* Page: Page10 */
 .page-contact .contact-info {
   padding: 0 0 48px;
 }
@@ -4046,31 +3957,7 @@ body.nav-open .site-header {
   }
 }
 
-/* Updates page — Stitch 08-updates-mobile (scoped to .page-updates) */
-.page-updates {
-  --trust-blue: #1e293b;
-  --growth-green: #22c55e;
-  --energy-orange: #fb923c;
-  --surface: #f8f9ff;
-  --surface-container: #e5eeff;
-  --surface-container-low: #eff4ff;
-  --surface-container-high: #dce9ff;
-  --on-surface-variant: #45464d;
-  --secondary: #006c49;
-  --on-secondary-container: #00714d;
-  --outline-variant: #c6c6cd;
-  --stack-md: 16px;
-  --stack-lg: 32px;
-  --section-gap: 80px;
-  --gutter: 24px;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1.5rem;
-  font-family: "Inter", Arial, sans-serif;
-  background: var(--surface);
-  color: var(--trust-blue);
-}
-
+/* Page: Page11 */
 .page-updates .updates-main {
   overflow-x: hidden;
   padding: 96px 0 var(--section-gap);
@@ -4411,80 +4298,11 @@ body.nav-open .site-header {
   }
 }
 
-/* Desktop alignment normalization — 768px+ only; mobile unchanged */
-@media (min-width: 768px) {
-  /* A. Contact — center hero with form column */
-  .page-contact .contact-hero {
-    text-align: center;
-  }
 
-  .page-contact .contact-lead {
-    max-width: 36rem;
-    margin-inline: auto;
-  }
-
-  .page-contact .contact-form-card {
-    max-width: 36rem;
-    margin-inline: auto;
-  }
-
-  /* B. Home — centered marketing sections, wider prose (hero grid unchanged) */
-  .page-home .home-mission-inner,
-  .page-home .home-ecosystem-inner {
-    max-width: 48rem;
-    text-align: center;
-  }
-
-  .page-home .home-cta-card {
-    max-width: 48rem;
-  }
-
-  /* C. Partner — widen form/donation; why heading stays centered */
-  .page-partner .partner-why h2 {
-    text-align: center;
-  }
-
-  .page-partner .partner-form-intro,
-  .page-partner .partner-form,
-  .page-partner .partner-donate-card {
-    max-width: 40rem;
-  }
-
-  /* D. About — editorial left rail inside centered site container */
-  .page-about .about-hero-inner,
-  .page-about .about-commitment-inner,
-  .page-about .about-mv-grid {
-    max-width: min(1120px, calc(100% - 32px));
-    margin-inline: auto;
-  }
-
-  .page-about .about-do-list {
-    max-width: 48rem;
-    margin-inline: 0;
-  }
-
-  .page-about .about-what-we-do .container {
-    max-width: min(1120px, calc(100% - 32px));
-    margin-inline: auto;
-  }
-
-  .page-about .about-do-list {
-    max-width: none;
-  }
-
-  .page-about .about-values-grid {
-    max-width: 48rem;
-  }
-
-  /* E. Updates — center feed column */
-  .page-updates .updates-container {
-    margin-inline: auto;
-  }
-}
-
-/* Header and hero consistency pass */
-
-/* 1. Keep simple mobile branding until desktop nav (1101px) */
+/* --------------------------------------------------------------------------
+   5. Desktop layout system
+   -------------------------------------------------------------------------- */
+/* A. Header — logo at 1101px (matches desktop nav drawer breakpoint) */
 @media (max-width: 1100px) {
   .logo-text {
     display: inline;
@@ -4508,13 +4326,15 @@ body.nav-open .site-header {
     font-size: 20px;
     font-weight: 700;
   }
+
+  .main-nav {
+    flex-wrap: nowrap;
+  }
 }
 
-/* 2. Reduce desktop nav crowding (1101px–1280px) */
 @media (min-width: 1101px) and (max-width: 1280px) {
   .main-nav {
-    gap: 4px;
-    flex-wrap: nowrap;
+    gap: 2px;
   }
 
   .nav-link {
@@ -4523,9 +4343,52 @@ body.nav-open .site-header {
   }
 }
 
-/* 3 & 7. Hero alignment + prevent alignment flips */
-.page-contact .contact-hero {
+/* B. Mobile-only page tweaks */
+@media (max-width: 767px) {
+  .page-home .home-hero {
+    min-height: 600px;
+  }
+}
+
+/* C. Alignment map — editorial left vs showcase center */
+.page-home .home-hero-copy {
+  text-align: left;
+}
+
+.page-about .about-hero-inner,
+.page-about .about-commitment-inner,
+.page-about .about-what-we-do,
+.page-about .about-mv-grid {
+  text-align: left;
+}
+
+.page-portfolio .port-hero,
+.page-partner .partner-hero-inner,
+.page-impact .impact-hero-copy,
+.page-contact .contact-hero,
+.page-updates .updates-header {
   text-align: center;
+}
+
+.page-home .home-mission-inner,
+.page-home .home-ecosystem-inner,
+.page-home .home-cta-card,
+.page-home .home-portfolio .home-section-title,
+.page-home .home-impact .home-section-title,
+.page-home .home-impact .home-section-title-light {
+  text-align: center;
+}
+
+.page-home .home-feature,
+.page-home .home-card {
+  text-align: left;
+}
+
+.page-contact .contact-form-section,
+.page-contact .contact-form-card,
+.page-updates .updates-feed,
+.page-updates .updates-card {
+  text-align: left;
 }
 
 .page-contact .contact-lead {
@@ -4547,30 +4410,9 @@ body.nav-open .site-header {
 
 .page-home .home-ecosystem-inner {
   margin-inline: auto;
-  text-align: center;
 }
 
-.page-home .home-cta-card {
-  text-align: center;
-}
-
-/* 4. Reduce excessive top spacing (Contact & Updates) */
-.page-contact .contact-main {
-  padding-top: 32px;
-}
-
-.page-updates .updates-main {
-  padding-top: 32px;
-}
-
-/* 5. Home mobile hero height */
-@media (max-width: 767px) {
-  .page-home .home-hero {
-    min-height: 600px;
-  }
-}
-
-/* 6. Normalize Home section h2 sizing (not hero h1) */
+/* D. Shared typography rhythm */
 .page-home .home-ecosystem h2,
 .page-home .home-section-title,
 .page-home .home-cta-card h2 {
@@ -4578,7 +4420,11 @@ body.nav-open .site-header {
   line-height: 32px;
 }
 
-/* 8. Normalize Home & About hero h1 to match other pages */
+.page-about .about-lead {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .page-about .about-hero h1,
 .page-home .home-hero-copy h1 {
   font-size: 28px;
@@ -4593,289 +4439,6 @@ body.nav-open .site-header {
     font-size: clamp(28px, 4vw, 36px);
     line-height: 36px;
   }
-}
-
-/* 9. Normalize About hero lead to match other pages (body-md) */
-.page-about .about-lead {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-/* 10. Header alignment system — editorial left, showcase center */
-.page-home .home-hero-copy {
-  text-align: left;
-}
-
-.page-about .about-hero-inner,
-.page-about .about-commitment-inner,
-.page-about .about-what-we-do,
-.page-about .about-mv-grid {
-  text-align: left;
-}
-
-.page-ecosystem .eco-definition-body {
-  text-align: left;
-}
-
-.page-portfolio .port-hero,
-.page-partner .partner-hero-inner,
-.page-impact .impact-hero-copy,
-.page-contact .contact-hero,
-.page-updates .updates-header {
-  text-align: center;
-}
-
-.page-home .home-mission-inner,
-.page-home .home-ecosystem-inner,
-.page-home .home-cta-card {
-  text-align: center;
-}
-
-.page-home .home-portfolio .home-section-title,
-.page-home .home-impact .home-section-title,
-.page-home .home-impact .home-section-title-light {
-  text-align: center;
-}
-
-.page-home .home-feature,
-.page-home .home-card {
-  text-align: left;
-}
-
-.page-contact .contact-form-section,
-.page-contact .contact-form-card,
-.page-updates .updates-feed,
-.page-updates .updates-card {
-  text-align: left;
-}
-
-/* Desktop design-system normalization */
-
-:root {
-  --measure-narrow: 42rem;
-  --measure-wide: 48rem;
-  --page-hero-padding: 48px;
-  --page-section-gap: 80px;
-  --hero-band-bg: #f8fafc;
-}
-
-/* 8. Header nav — keep 14px on narrow desktop */
-@media (min-width: 1101px) and (max-width: 1280px) {
-  .main-nav {
-    gap: 2px;
-    flex-wrap: nowrap;
-  }
-
-  .nav-link {
-    padding: 8px 7px;
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* Home — two-column hero, tighter bottom spacing */
-  .page-home .home-hero {
-    padding: var(--page-hero-padding) 0 60px;
-  }
-
-  .page-home .home-mission-inner,
-  .page-home .home-ecosystem-inner {
-    max-width: var(--measure-wide);
-  }
-
-  /* Template A — Editorial left rail (About only) */
-  .page-about .about-hero {
-    padding: var(--page-hero-padding) 0;
-    background: var(--hero-band-bg);
-  }
-
-  .page-about .about-hero-inner,
-  .page-about .about-commitment-inner,
-  .page-about .about-mv-grid {
-    max-width: min(1120px, calc(100% - 32px));
-    margin-inline: auto;
-  }
-
-  .page-about .about-do-list {
-    max-width: var(--measure-wide);
-    margin-inline: 0;
-  }
-
-  .page-about .about-what-we-do .container {
-    max-width: min(1120px, calc(100% - 32px));
-    margin-inline: auto;
-  }
-
-  .page-about .about-values-grid {
-    max-width: var(--measure-wide);
-    margin-inline: auto;
-  }
-
-  .page-ecosystem .eco-definition-body p {
-    max-width: var(--measure-wide);
-  }
-
-  /* Template B — Marketing centered hero */
-  .page-portfolio .port-hero,
-  .page-partner .partner-hero-inner,
-  .page-contact .contact-hero,
-  .page-updates .updates-header {
-    text-align: center;
-  }
-
-  .page-portfolio .port-hero {
-    padding: var(--page-hero-padding) 0;
-    background: var(--hero-band-bg);
-  }
-
-  .page-portfolio .port-hero-inner {
-    max-width: var(--measure-narrow);
-    margin-inline: auto;
-  }
-
-  .page-portfolio .port-lead {
-    max-width: var(--measure-narrow);
-  }
-
-  .page-partner .partner-hero {
-    padding: var(--page-hero-padding) 0;
-    background: var(--hero-band-bg);
-  }
-
-  .page-partner .partner-hero-inner {
-    max-width: var(--measure-narrow);
-    margin-inline: auto;
-  }
-
-  .page-partner .partner-lead {
-    max-width: var(--measure-narrow);
-    margin-inline: auto;
-    padding-inline: 0;
-  }
-
-  .page-contact .contact-main {
-    padding-top: 0;
-  }
-
-  .page-contact .contact-hero {
-    padding: var(--page-hero-padding) 0;
-    background: var(--hero-band-bg);
-  }
-
-  .page-contact .contact-lead,
-  .page-contact .contact-form-card {
-    max-width: var(--measure-narrow);
-  }
-
-  .page-updates .updates-main {
-    padding-top: 0;
-  }
-
-  .page-updates .updates-container {
-    max-width: var(--measure-narrow);
-  }
-
-  .page-updates .updates-header {
-    padding: var(--page-hero-padding) var(--gutter);
-    margin-bottom: var(--stack-lg);
-    background: var(--hero-band-bg);
-    border-radius: var(--radius-2xl);
-  }
-
-  /* Impact — keep feature card, normalize spacing */
-  .page-impact .impact-hero {
-    padding: var(--page-hero-padding) 0;
-  }
-
-  /* Content widths — forms and partner blocks */
-  .page-partner .partner-form-intro,
-  .page-partner .partner-form,
-  .page-partner .partner-donate-card {
-    max-width: var(--measure-narrow);
-    margin-inline: auto;
-  }
-
-  /* 7. Section h2 consistency at desktop */
-  .page-home .home-ecosystem h2,
-  .page-home .home-section-title,
-  .page-home .home-cta-card h2,
-  .page-home .home-mission h2,
-  .page-ecosystem .eco-hub-heading h2,
-  .page-partner .partner-why h2,
-  .page-partner .partner-impact-areas h2 {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  /* Editorial sections — left rail, wide measure */
-  .page-about .about-commitment-inner p,
-  .page-about .about-do-list {
-    max-width: var(--measure-wide);
-  }
-}
-
-/* Desktop professional cleanup */
-
-/* Impact hero — centered at source (all viewports) */
-.page-impact .impact-hero-copy {
-  text-align: center;
-  max-width: var(--measure-narrow, 42rem);
-  margin-inline: auto;
-  width: 100%;
-}
-
-.page-impact .impact-lead {
-  margin-inline: auto;
-}
-
-.page-impact .impact-pill {
-  display: inline-block;
-}
-
-/* Nav — always 14px on narrow desktop */
-@media (min-width: 1101px) and (max-width: 1280px) {
-  .main-nav {
-    gap: 2px;
-    flex-wrap: nowrap;
-  }
-
-  .nav-link {
-    padding: 8px 7px;
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* About — editorial left rail inside centered site container */
-  .page-about .about-hero-inner,
-  .page-about .about-commitment-inner,
-  .page-about .about-mv-grid {
-    width: min(1120px, calc(100% - 32px));
-    max-width: min(1120px, calc(100% - 32px));
-    margin-inline: auto;
-  }
-
-  .page-about .about-do-list {
-    max-width: var(--measure-wide, 48rem);
-    margin-inline: 0;
-  }
-
-  .page-about .about-what-we-do .container {
-    max-width: min(1120px, calc(100% - 32px));
-    margin-inline: auto;
-  }
-
-  .page-about .about-values-grid {
-    max-width: var(--measure-wide, 48rem);
-    margin-inline: auto;
-  }
-
-  /* About — card h3 below section h2 hierarchy */
-  .page-about .about-card h3 {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 600;
-  }
 
   .page-about .about-commitment h2 {
     font-size: 24px;
@@ -4883,29 +4446,42 @@ body.nav-open .site-header {
     font-weight: 600;
   }
 
-  .page-about .about-hero h1 {
-    font-weight: 600;
+  .page-about .about-what-we-do .container {
+    max-width: min(var(--layout-max), calc(100% - 32px));
+    margin-inline: auto;
   }
 
-  /* Ecosystem — marketing/showcase (not editorial left) */
+  /* Home — centered marketing sections */
+  .page-home .home-mission-inner,
+  .page-home .home-ecosystem-inner {
+    max-width: var(--measure-wide);
+    text-align: center;
+  }
+
+  .page-home .home-cta-card {
+    max-width: var(--measure-wide);
+    text-align: center;
+  }
+
+  /* Ecosystem — showcase template */
   .page-ecosystem .eco-hero .container {
     text-align: center;
   }
 
   .page-ecosystem .eco-hero h1,
   .page-ecosystem .eco-lead {
-    max-width: var(--measure-narrow, 42rem);
+    max-width: var(--measure-narrow);
     margin-inline: auto;
   }
 
   .page-ecosystem .eco-hero {
-    padding: var(--page-hero-padding, 48px) 0;
-    background: var(--hero-band-bg, #f8fafc);
+    padding: var(--page-hero-padding) 0;
+    background: var(--hero-band-bg);
   }
 
   .page-ecosystem .eco-definition-body {
     text-align: center;
-    max-width: var(--measure-narrow, 42rem);
+    max-width: var(--measure-narrow);
     margin-inline: auto;
   }
 
@@ -4936,91 +4512,104 @@ body.nav-open .site-header {
     justify-content: center;
   }
 
-  /* Impact — spacing aligned with other inner pages */
-  .page-impact .impact-hero {
-    padding: var(--page-hero-padding, 48px) 0;
-  }
-
-  .page-impact .impact-intro,
-  .page-impact .impact-stories-heading,
-  .page-impact .impact-action-card h2 {
+  /* Portfolio — centered hero */
+  .page-portfolio .port-hero {
+    padding: var(--page-hero-padding) 0;
+    background: var(--hero-band-bg);
     text-align: center;
   }
 
-  /* Marketing pages — reinforce centered hero rhythm */
-  .page-portfolio .port-hero,
-  .page-partner .partner-hero-inner,
-  .page-contact .contact-hero,
-  .page-updates .updates-header {
-    text-align: center;
+  .page-portfolio .port-hero-inner {
+    max-width: var(--measure-narrow);
+    margin-inline: auto;
   }
 
-  .page-portfolio .port-hero-inner,
+  .page-portfolio .port-lead {
+    max-width: var(--measure-narrow);
+    margin-inline: auto;
+  }
+
+  /* Partner — centered hero and balanced forms */
+  .page-partner .partner-hero {
+    padding: var(--page-hero-padding) 0;
+    background: var(--hero-band-bg);
+  }
+
   .page-partner .partner-hero-inner {
-    max-width: var(--measure-narrow, 42rem);
+    max-width: var(--measure-narrow);
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .page-partner .partner-lead {
+    max-width: var(--measure-narrow);
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  .page-partner .partner-form-intro,
+  .page-partner .partner-form,
+  .page-partner .partner-donate-card {
+    max-width: var(--measure-narrow);
     margin-inline: auto;
   }
 
-  .page-portfolio .port-lead,
-  .page-partner .partner-lead,
-  .page-contact .contact-lead {
-    max-width: var(--measure-narrow, 42rem);
+  /* Contact — centered hero, balanced form and map */
+  .page-contact .contact-main {
+    padding-top: 0;
+  }
+
+  .page-contact .contact-hero {
+    padding: var(--page-hero-padding) 0;
+    background: var(--hero-band-bg);
+    text-align: center;
+  }
+
+  .page-contact .contact-lead,
+  .page-contact .contact-form-card {
+    max-width: var(--measure-narrow);
     margin-inline: auto;
   }
 
-  .page-contact .contact-main,
+  /* Updates — centered column */
   .page-updates .updates-main {
     padding-top: 0;
   }
 
   .page-updates .updates-container {
-    max-width: var(--measure-narrow, 42rem);
+    max-width: var(--measure-narrow);
     margin-inline: auto;
     text-align: center;
+  }
+
+  .page-updates .updates-header {
+    padding: var(--page-hero-padding) var(--gutter);
+    margin-bottom: var(--stack-lg);
+    background: var(--hero-band-bg);
+    border-radius: var(--radius-2xl);
+    text-align: center;
+  }
+
+  /* Impact — hero spacing */
+  .page-impact .impact-hero {
+    padding: var(--page-hero-padding) 0;
+  }
+
+  /* Section h2 consistency */
+  .page-home .home-ecosystem h2,
+  .page-home .home-section-title,
+  .page-home .home-cta-card h2,
+  .page-home .home-mission h2,
+  .page-ecosystem .eco-hub-heading h2,
+  .page-partner .partner-why h2,
+  .page-partner .partner-impact-areas h2 {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
 @media (min-width: 1024px) {
   .page-ecosystem .eco-hub-stack {
     max-width: 960px;
-  }
-}
-
-/* About + Impact follow-up fixes */
-
-@media (min-width: 768px) {
-  /* About — restore standard site container gutters (containers are .about-*-inner) */
-  .page-about .about-hero-inner,
-  .page-about .about-commitment-inner,
-  .page-about .about-mv-grid {
-    width: min(1120px, calc(100% - 32px));
-    max-width: min(1120px, calc(100% - 32px));
-    margin-inline: auto;
-  }
-
-  .page-about .about-do-list {
-    max-width: var(--measure-wide, 48rem);
-    margin-inline: 0;
-  }
-
-  /* Impact — metric cards full container width like Partner why-cards */
-  .page-impact .impact-metrics-row {
-    max-width: none;
-    width: 100%;
-    gap: var(--gutter, 24px);
-  }
-
-  .page-impact .impact-metric-card {
-    padding: var(--gutter, 24px);
-    min-height: 180px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .page-impact .impact-metric-card strong,
-  .page-impact .impact-metric-card .impact-metric-value {
-    font-size: clamp(28px, 3vw, 36px);
   }
 }
