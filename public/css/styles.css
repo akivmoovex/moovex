@@ -4514,8 +4514,8 @@ body.nav-open .site-header {
   }
 
   .nav-link {
-    padding: 8px 9px;
-    font-size: 13px;
+    padding: 8px 7px;
+    font-size: 14px;
   }
 }
 
@@ -4644,4 +4644,185 @@ body.nav-open .site-header {
 .page-updates .updates-feed,
 .page-updates .updates-card {
   text-align: left;
+}
+
+/* Desktop design-system normalization */
+
+:root {
+  --measure-narrow: 42rem;
+  --measure-wide: 48rem;
+  --page-hero-padding: 48px;
+  --page-section-gap: 80px;
+  --hero-band-bg: #f8fafc;
+}
+
+/* 8. Header nav — keep 14px on narrow desktop */
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .main-nav {
+    gap: 2px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    padding: 8px 7px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Home — two-column hero, tighter bottom spacing */
+  .page-home .home-hero {
+    padding: var(--page-hero-padding) 0 60px;
+  }
+
+  .page-home .home-mission-inner,
+  .page-home .home-ecosystem-inner {
+    max-width: var(--measure-wide);
+  }
+
+  /* Template A — Editorial left rail (About, Ecosystem) */
+  .page-about .about-hero {
+    padding: var(--page-hero-padding) 0;
+    background: var(--hero-band-bg);
+  }
+
+  .page-about .about-hero-inner,
+  .page-about .about-commitment-inner,
+  .page-about .about-do-list {
+    max-width: var(--measure-wide);
+    margin-inline: 0;
+  }
+
+  .page-about .about-mv-grid {
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .page-about .about-what-we-do .container {
+    max-width: min(1120px, calc(100% - 32px));
+    margin-inline: auto;
+  }
+
+  .page-about .about-values-grid {
+    max-width: var(--measure-wide);
+    margin-inline: auto;
+  }
+
+  .page-ecosystem .eco-hero .container {
+    text-align: left;
+  }
+
+  .page-ecosystem .eco-hero h1,
+  .page-ecosystem .eco-lead {
+    max-width: var(--measure-wide);
+    margin-inline: 0;
+  }
+
+  .page-ecosystem .eco-hero {
+    padding: var(--page-hero-padding) 0;
+    margin-bottom: var(--stack-lg);
+    background: var(--hero-band-bg);
+  }
+
+  .page-ecosystem .eco-definition-body p {
+    max-width: var(--measure-wide);
+  }
+
+  /* Template B — Marketing centered hero */
+  .page-portfolio .port-hero,
+  .page-partner .partner-hero-inner,
+  .page-contact .contact-hero,
+  .page-updates .updates-header {
+    text-align: center;
+  }
+
+  .page-portfolio .port-hero {
+    padding: var(--page-hero-padding) 0;
+    background: var(--hero-band-bg);
+  }
+
+  .page-portfolio .port-hero-inner {
+    max-width: var(--measure-narrow);
+    margin-inline: auto;
+  }
+
+  .page-portfolio .port-lead {
+    max-width: var(--measure-narrow);
+  }
+
+  .page-partner .partner-hero {
+    padding: var(--page-hero-padding) 0;
+    background: var(--hero-band-bg);
+  }
+
+  .page-partner .partner-hero-inner {
+    max-width: var(--measure-narrow);
+    margin-inline: auto;
+  }
+
+  .page-partner .partner-lead {
+    max-width: var(--measure-narrow);
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  .page-contact .contact-main {
+    padding-top: 0;
+  }
+
+  .page-contact .contact-hero {
+    padding: var(--page-hero-padding) 0;
+    background: var(--hero-band-bg);
+  }
+
+  .page-contact .contact-lead,
+  .page-contact .contact-form-card {
+    max-width: var(--measure-narrow);
+  }
+
+  .page-updates .updates-main {
+    padding-top: 0;
+  }
+
+  .page-updates .updates-container {
+    max-width: var(--measure-narrow);
+  }
+
+  .page-updates .updates-header {
+    padding: var(--page-hero-padding) var(--gutter);
+    margin-bottom: var(--stack-lg);
+    background: var(--hero-band-bg);
+    border-radius: var(--radius-2xl);
+  }
+
+  /* Impact — keep feature card, normalize spacing */
+  .page-impact .impact-hero {
+    padding: var(--page-hero-padding) 0;
+  }
+
+  /* Content widths — forms and partner blocks */
+  .page-partner .partner-form-intro,
+  .page-partner .partner-form,
+  .page-partner .partner-donate-card {
+    max-width: var(--measure-narrow);
+    margin-inline: auto;
+  }
+
+  /* 7. Section h2 consistency at desktop */
+  .page-home .home-ecosystem h2,
+  .page-home .home-section-title,
+  .page-home .home-cta-card h2,
+  .page-home .home-mission h2,
+  .page-ecosystem .eco-hub-heading h2,
+  .page-partner .partner-why h2,
+  .page-partner .partner-impact-areas h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* Editorial sections — left rail, wide measure */
+  .page-about .about-commitment-inner p,
+  .page-about .about-do-list {
+    max-width: var(--measure-wide);
+  }
 }
