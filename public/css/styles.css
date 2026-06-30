@@ -4450,17 +4450,17 @@ body.nav-open .site-header {
     max-width: 40rem;
   }
 
-  /* D. About — centered editorial column, consistent left text inside */
+  /* D. About — editorial left rail (not centered column) */
   .page-about .about-hero-inner,
   .page-about .about-commitment-inner,
   .page-about .about-mv-grid,
   .page-about .about-do-list {
     max-width: 48rem;
-    margin-inline: auto;
+    margin-inline: 0;
   }
 
   .page-about .about-what-we-do .container {
-    max-width: 48rem;
+    max-width: min(1120px, calc(100% - 32px));
     margin-inline: auto;
   }
 
@@ -4609,7 +4609,6 @@ body.nav-open .site-header {
   text-align: left;
 }
 
-.page-ecosystem .eco-hero .container,
 .page-ecosystem .eco-definition-body {
   text-align: left;
 }
@@ -4680,7 +4679,7 @@ body.nav-open .site-header {
     max-width: var(--measure-wide);
   }
 
-  /* Template A — Editorial left rail (About, Ecosystem) */
+  /* Template A — Editorial left rail (About only) */
   .page-about .about-hero {
     padding: var(--page-hero-padding) 0;
     background: var(--hero-band-bg);
@@ -4706,22 +4705,6 @@ body.nav-open .site-header {
   .page-about .about-values-grid {
     max-width: var(--measure-wide);
     margin-inline: auto;
-  }
-
-  .page-ecosystem .eco-hero .container {
-    text-align: left;
-  }
-
-  .page-ecosystem .eco-hero h1,
-  .page-ecosystem .eco-lead {
-    max-width: var(--measure-wide);
-    margin-inline: 0;
-  }
-
-  .page-ecosystem .eco-hero {
-    padding: var(--page-hero-padding) 0;
-    margin-bottom: var(--stack-lg);
-    background: var(--hero-band-bg);
   }
 
   .page-ecosystem .eco-definition-body p {
@@ -4824,5 +4807,176 @@ body.nav-open .site-header {
   .page-about .about-commitment-inner p,
   .page-about .about-do-list {
     max-width: var(--measure-wide);
+  }
+}
+
+/* Desktop professional cleanup */
+
+/* Impact hero — centered at source (all viewports) */
+.page-impact .impact-hero-copy {
+  text-align: center;
+  max-width: var(--measure-narrow, 42rem);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.page-impact .impact-lead {
+  margin-inline: auto;
+}
+
+.page-impact .impact-pill {
+  display: inline-block;
+}
+
+/* Nav — always 14px on narrow desktop */
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .main-nav {
+    gap: 2px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    padding: 8px 7px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* About — editorial left rail (override centered-column conflict) */
+  .page-about .about-hero-inner,
+  .page-about .about-commitment-inner,
+  .page-about .about-mv-grid,
+  .page-about .about-do-list {
+    max-width: var(--measure-wide, 48rem);
+    margin-inline: 0;
+  }
+
+  .page-about .about-what-we-do .container {
+    max-width: min(1120px, calc(100% - 32px));
+    margin-inline: auto;
+  }
+
+  .page-about .about-do-list {
+    max-width: var(--measure-wide, 48rem);
+  }
+
+  .page-about .about-values-grid {
+    max-width: var(--measure-wide, 48rem);
+    margin-inline: auto;
+  }
+
+  /* About — card h3 below section h2 hierarchy */
+  .page-about .about-card h3 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+
+  .page-about .about-commitment h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+
+  .page-about .about-hero h1 {
+    font-weight: 600;
+  }
+
+  /* Ecosystem — marketing/showcase (not editorial left) */
+  .page-ecosystem .eco-hero .container {
+    text-align: center;
+  }
+
+  .page-ecosystem .eco-hero h1,
+  .page-ecosystem .eco-lead {
+    max-width: var(--measure-narrow, 42rem);
+    margin-inline: auto;
+  }
+
+  .page-ecosystem .eco-hero {
+    padding: var(--page-hero-padding, 48px) 0;
+    background: var(--hero-band-bg, #f8fafc);
+  }
+
+  .page-ecosystem .eco-definition-body {
+    text-align: center;
+    max-width: var(--measure-narrow, 42rem);
+    margin-inline: auto;
+  }
+
+  .page-ecosystem .eco-definition-body p {
+    max-width: none;
+    margin-inline: auto;
+  }
+
+  .page-ecosystem .eco-definition-note {
+    justify-content: center;
+  }
+
+  .page-ecosystem .eco-hub-heading {
+    text-align: center;
+  }
+
+  .page-ecosystem .eco-hub-stack {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  .page-ecosystem .eco-hub-spokes {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  .page-ecosystem .eco-benefit-heading {
+    justify-content: center;
+  }
+
+  /* Impact — spacing aligned with other inner pages */
+  .page-impact .impact-hero {
+    padding: var(--page-hero-padding, 48px) 0;
+  }
+
+  .page-impact .impact-intro,
+  .page-impact .impact-stories-heading,
+  .page-impact .impact-action-card h2 {
+    text-align: center;
+  }
+
+  /* Marketing pages — reinforce centered hero rhythm */
+  .page-portfolio .port-hero,
+  .page-partner .partner-hero-inner,
+  .page-contact .contact-hero,
+  .page-updates .updates-header {
+    text-align: center;
+  }
+
+  .page-portfolio .port-hero-inner,
+  .page-partner .partner-hero-inner {
+    max-width: var(--measure-narrow, 42rem);
+    margin-inline: auto;
+  }
+
+  .page-portfolio .port-lead,
+  .page-partner .partner-lead,
+  .page-contact .contact-lead {
+    max-width: var(--measure-narrow, 42rem);
+    margin-inline: auto;
+  }
+
+  .page-contact .contact-main,
+  .page-updates .updates-main {
+    padding-top: 0;
+  }
+
+  .page-updates .updates-container {
+    max-width: var(--measure-narrow, 42rem);
+    margin-inline: auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-ecosystem .eco-hub-stack {
+    max-width: 960px;
   }
 }
