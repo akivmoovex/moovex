@@ -1723,14 +1723,20 @@ body.nav-open .site-header {
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  max-width: 36rem;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .page-about .about-photo {
   position: absolute;
   inset: 0;
   overflow: hidden;
+}
+
+.page-about .about-photo-zambia {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiWeVTMvYocNPrjTgYJER_0NRXSO1JQVStfgJgsXMBaptym_6TEKUBbNA_hVwBPGBTATKL9297A4ysj3CpBsQ1U8co1QTTrax7nBTJ9mmG6B_jWI90zESLkdZrn6W2tKjQuSxWwX9vWxx-5WCM9VD1zdC7ic8TxVIt0ygU2wvf9yA2KIihjbNN_gNi82I4lAZi3nYNAj_teIYdyKoFiAcDTLmXnEvrX2tdULotgbAE3yLPN_N3dwLe0N06CERklii_D67IU8kXgp4');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .page-about .about-photo-market {
@@ -1781,7 +1787,7 @@ body.nav-open .site-header {
 .page-about .about-photo-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--trust-blue) 0%, rgba(30, 41, 59, 0.4) 55%, transparent 100%);
+  background: linear-gradient(to top, var(--trust-blue) 0%, rgba(30, 41, 59, 0.4) 40%, transparent 100%);
 }
 
 .page-about .about-photo-content {
@@ -1863,7 +1869,6 @@ body.nav-open .site-header {
   }
 
   .page-about .about-photo-card {
-    max-width: 48rem;
     min-height: 420px;
   }
 }
