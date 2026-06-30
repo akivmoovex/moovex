@@ -1,0 +1,402 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Moovex Ecosystem | Empowering Zambian Entrepreneurship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        /* Soft Shadow Custom Utility */
+        .soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(30, 41, 59, 0.05);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-alt": "#F8FAFC",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "background": "#f8f9ff",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "surface-bright": "#f8f9ff",
+                        "on-surface": "#0b1c30",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-surface-variant": "#45464d",
+                        "inverse-primary": "#bec6e0",
+                        "trust-blue": "#1E293B",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "surface": "#f8f9ff",
+                        "outline-variant": "#c6c6cd",
+                        "surface-tint": "#565e74",
+                        "secondary": "#006c49",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-container": "#341100",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-variant": "#d3e4fe",
+                        "on-tertiary-fixed": "#341100",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#6cf8bb",
+                        "on-background": "#0b1c30",
+                        "on-primary-container": "#7c839b",
+                        "surface-container": "#e5eeff",
+                        "tertiary": "#000000",
+                        "on-tertiary-container": "#d95f00",
+                        "on-secondary-container": "#00714d",
+                        "surface-dim": "#cbdbf5",
+                        "secondary-fixed": "#6ffbbe",
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed": "#ffdbca",
+                        "growth-green": "#22C55E",
+                        "outline": "#76777d",
+                        "energy-orange": "#FB923C",
+                        "error": "#ba1a1a",
+                        "primary-container": "#131b2e",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-xl": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-gutter py-4 bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-stack-md">
+<button class="material-symbols-outlined text-secondary text-headline-md active:opacity-80 active:scale-95 transition-all" onclick="toggleDrawer()">menu</button>
+<span class="font-headline-md text-headline-md font-bold text-trust-blue">Moovex</span>
+</div>
+<div class="hidden md:flex gap-gutter">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="#">Home</a>
+<a class="text-secondary font-bold border-b-2 border-secondary font-label-md text-label-md" href="#">Ecosystem</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="#">Impact</a>
+</div>
+<button class="bg-growth-green text-on-primary px-5 py-2 rounded-lg font-label-md text-label-md shadow-sm active:scale-95 transition-all">Join Us</button>
+</header>
+<!-- NavigationDrawer (Mobile) -->
+<div class="fixed inset-y-0 left-0 z-[60] w-80 bg-surface dark:bg-on-primary-fixed shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col gap-4" id="drawer">
+<div class="flex justify-between items-center mb-6">
+<span class="font-headline-md text-headline-md font-bold text-trust-blue">Moovex Ecosystem</span>
+<button class="material-symbols-outlined" onclick="toggleDrawer()">close</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">info</span> About
+            </a>
+<a class="flex items-center gap-4 p-3 bg-secondary-container text-on-secondary-container rounded-lg font-bold font-label-md text-label-md active:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">hub</span> Ecosystem
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">business_center</span> Portfolio
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">analytics</span> Impact
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">volunteer_activism</span> Partner
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">mail</span> Contact
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">rss_feed</span> Updates
+            </a>
+</nav>
+</div>
+<div class="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" id="overlay" onclick="toggleDrawer()"></div>
+<main class="pt-24 pb-20 px-margin-mobile">
+<!-- Hero Section -->
+<section class="py-stack-lg mb-stack-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm mb-4 inline-block">OUR VISION</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-trust-blue leading-tight mb-4">
+                The Moovex Ecosystem
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Building a circular, tech-enabled network of ventures that drive sustainable development and entrepreneurial excellence across Zambia.
+            </p>
+</section>
+<!-- Definition Section -->
+<section class="mb-section-gap">
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md text-trust-blue mb-4">What is the Moovex ecosystem?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        It is a synchronized network of specialized subsidiaries designed to solve local challenges through global innovation. By integrating energy, digital solutions, retail, and infrastructure, we create a fertile ground where businesses thrive and communities prosper.
+                    </p>
+<div class="flex items-center gap-3 text-secondary font-label-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="">Sustainably Powered Growth</span>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[120px]">hub</span>
+</div>
+</div>
+</section>
+<!-- Diagram Section: Bento-style mobile stack -->
+<section class="mb-section-gap">
+<div class="text-center mb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-trust-blue">Our Strategic Pillars</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mt-2 uppercase tracking-wider">Moovex Central Hub</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Moovex Center Card -->
+<div class="bg-trust-blue p-6 rounded-2xl text-center shadow-xl transform transition-all duration-300 active:scale-[0.98]">
+<div class="w-16 h-16 bg-growth-green rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-on-primary text-3xl">token</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-primary">Moovex</h4>
+<p class="text-on-primary/70 font-label-sm text-label-sm mt-1 uppercase">Ecosystem Core</p>
+</div>
+<!-- Subsidiaries Grid -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Chomaya -->
+<div class="glass-card p-5 rounded-2xl flex items-center gap-4 soft-shadow">
+<div class="w-12 h-12 bg-energy-orange/10 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-energy-orange">local_gas_station</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-trust-blue">Chomaya</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Sustainable Fuel - Taxis, Trucks &amp; Buses</p>
+</div>
+</div>
+<!-- GetPro -->
+<div class="glass-card p-5 rounded-2xl flex items-center gap-4 soft-shadow">
+<div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">devices</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-trust-blue">GetPro</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Digital Transformation &amp; Call Center</p>
+</div>
+</div>
+<!-- Facha -->
+<div class="glass-card p-5 rounded-2xl flex items-center gap-4 soft-shadow">
+<div class="w-12 h-12 bg-growth-green/10 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-growth-green">account_balance</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-trust-blue">Facha</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Retail Network &amp; E-Banking Access</p>
+</div>
+</div>
+<!-- Netra -->
+<div class="glass-card p-5 rounded-2xl flex items-center gap-4 soft-shadow">
+<div class="w-12 h-12 bg-trust-blue/10 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-trust-blue">domain</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-trust-blue">Netra</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Property Management &amp; Revenue Growth.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="space-y-stack-lg">
+<!-- Company Benefits -->
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="h-1 w-8 bg-growth-green rounded-full"></span>
+<h3 class="font-headline-md text-headline-md text-trust-blue">How companies benefit</h3>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex gap-4 items-start p-4 bg-white rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-growth-green mt-1">check_circle</span>
+<div>
+<p class="font-label-md text-label-md text-trust-blue">Integrated Logistics</p>
+<p class="font-body-md text-sm text-on-surface-variant">Access to seamless energy and transport networks.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start p-4 bg-white rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-growth-green mt-1">check_circle</span>
+<div>
+<p class="font-label-md text-label-md text-trust-blue">Digital First Infrastructure</p>
+<p class="font-body-md text-sm text-on-surface-variant">Enterprise-grade tech tools tailored for the local market.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start p-4 bg-white rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-growth-green mt-1">check_circle</span>
+<div>
+<p class="font-label-md text-label-md text-trust-blue">Shared Prosperity Model</p>
+<p class="font-body-md text-sm text-on-surface-variant">Collective bargaining and investment power within the group.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Society Benefits -->
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-2">
+<span class="h-1 w-8 bg-energy-orange rounded-full"></span>
+<h3 class="font-headline-md text-headline-md text-trust-blue">How society benefits</h3>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex gap-4 items-start p-4 bg-white rounded-xl border border-outline-variant/20">
+<div class="w-8 h-8 rounded-full bg-energy-orange/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-energy-orange text-sm">groups</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-trust-blue">Employment Creation</p>
+<p class="font-body-md text-sm text-on-surface-variant">Over 5,000 indirect jobs generated through our diverse subsidiaries.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start p-4 bg-white rounded-xl border border-outline-variant/20">
+<div class="w-8 h-8 rounded-full bg-energy-orange/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-energy-orange text-sm">payments</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-trust-blue">Financial Inclusion</p>
+<p class="font-body-md text-sm text-on-surface-variant">Bringing banking and digital services to underserved rural areas.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start p-4 bg-white rounded-xl border border-outline-variant/20">
+<div class="w-8 h-8 rounded-full bg-energy-orange/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-energy-orange text-sm">psychology</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-trust-blue">Skill Transfer</p>
+<p class="font-body-md text-sm text-on-surface-variant">Continuous training and incubation for local entrepreneurs.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-gutter bg-trust-blue dark:bg-on-primary-fixed text-on-primary">
+<div class="space-y-4">
+<span class="font-headline-md text-headline-md text-on-primary">Moovex</span>
+<p class="font-body-md text-body-md text-on-primary/70">Building the infrastructure for Zambia's entrepreneurial future.</p>
+</div>
+<div class="space-y-2">
+<h6 class="font-label-md text-label-md text-on-primary uppercase tracking-widest opacity-60">Company</h6>
+<ul class="space-y-2">
+<li class=""><a class="text-on-primary/80 hover:text-on-primary transition-transform duration-200 hover:translate-x-1 block" href="#">About Us</a></li>
+<li class=""><a class="text-growth-green transition-transform duration-200 hover:translate-x-1 block" href="#">Ecosystem</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-on-primary transition-transform duration-200 hover:translate-x-1 block" href="#">Portfolio</a></li>
+</ul>
+</div>
+<div class="space-y-2">
+<h6 class="font-label-md text-label-md text-on-primary uppercase tracking-widest opacity-60">Connect</h6>
+<ul class="space-y-2">
+<li class=""><a class="text-on-primary/80 hover:text-on-primary transition-transform duration-200 hover:translate-x-1 block" href="#">Partner With Us</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-on-primary transition-transform duration-200 hover:translate-x-1 block" href="#">Contact Us</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-on-primary transition-transform duration-200 hover:translate-x-1 block" href="#">Latest Updates</a></li>
+</ul>
+</div>
+<div class="pt-stack-md border-t border-on-primary/10 md:border-none">
+<p class="font-body-md text-label-sm text-on-primary/60">© 2024 Moovex Zambia. Promoting entrepreneurship in Zambia.</p>
+</div>
+</footer>
+<!-- FAB (Suppressed on details but relevant here for "Joining") -->
+<button class="fixed bottom-6 right-6 w-14 h-14 bg-growth-green text-on-primary rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-all z-40">
+<span class="material-symbols-outlined">add_business</span>
+</button>
+<script>
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('overlay');
+
+        function toggleDrawer() {
+            const isOpen = !drawer.classList.contains('-translate-x-full');
+            if (isOpen) {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                overlay.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto';
+            } else {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Micro-interactions for cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.classList.add('scale-[0.98]');
+            });
+            card.addEventListener('touchend', () => {
+                card.classList.remove('scale-[0.98]');
+            });
+        });
+    </script>
+
+
+</body></html>

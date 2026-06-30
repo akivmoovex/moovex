@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Moovex Zambia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom soft shadows per style guidance */
+        .soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(30, 41, 59, 0.05);
+        }
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-alt": "#F8FAFC",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#eff4ff",
+                      "background": "#f8f9ff",
+                      "tertiary-fixed-dim": "#ffb690",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-tertiary-fixed-variant": "#783200",
+                      "surface-bright": "#f8f9ff",
+                      "on-surface": "#0b1c30",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-surface-variant": "#45464d",
+                      "inverse-primary": "#bec6e0",
+                      "trust-blue": "#1E293B",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed": "#131b2e",
+                      "surface": "#f8f9ff",
+                      "outline-variant": "#c6c6cd",
+                      "surface-tint": "#565e74",
+                      "secondary": "#006c49",
+                      "secondary-fixed-dim": "#4edea3",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#dce9ff",
+                      "tertiary-container": "#341100",
+                      "on-secondary-fixed-variant": "#005236",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#dae2fd",
+                      "on-secondary-fixed": "#002113",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "surface-variant": "#d3e4fe",
+                      "on-tertiary-fixed": "#341100",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#6cf8bb",
+                      "on-background": "#0b1c30",
+                      "on-primary-container": "#7c839b",
+                      "surface-container": "#e5eeff",
+                      "tertiary": "#000000",
+                      "on-tertiary-container": "#d95f00",
+                      "on-secondary-container": "#00714d",
+                      "surface-dim": "#cbdbf5",
+                      "secondary-fixed": "#6ffbbe",
+                      "inverse-surface": "#213145",
+                      "tertiary-fixed": "#ffdbca",
+                      "growth-green": "#22C55E",
+                      "outline": "#76777d",
+                      "energy-orange": "#FB923C",
+                      "error": "#ba1a1a",
+                      "primary-container": "#131b2e",
+                      "inverse-on-surface": "#eaf1ff",
+                      "primary": "#000000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "2xl": "1.5rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "section-gap": "80px",
+                      "stack-sm": "8px",
+                      "container-max": "1280px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "headline-xl": ["Outfit"],
+                      "headline-lg": ["Outfit"],
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Outfit"],
+                      "headline-md": ["Outfit"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-gutter py-4 bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-4">
+<button class="p-2 -ml-2 rounded-full hover:bg-surface-container transition-colors duration-200" id="drawer-toggle">
+<span class="material-symbols-outlined text-secondary">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-trust-blue">Moovex</h1>
+</div>
+<div class="md:flex hidden gap-6">
+<!-- Navigation items for desktop hidden in mobile prompt but mapped for context -->
+<a class="font-label-md text-label-md text-secondary font-bold border-b-2 border-secondary" href="#">Contact</a>
+</div>
+</header>
+<!-- NavigationDrawer Overlay -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-[55] hidden opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
+<!-- NavigationDrawer -->
+<nav class="fixed inset-y-0 left-0 z-[60] p-6 space-y-4 bg-surface h-full w-80 rounded-r-xl shadow-2xl -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto no-scrollbar" id="nav-drawer">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-headline-md text-headline-md font-bold text-trust-blue">Moovex Ecosystem</h2>
+<button class="p-2 rounded-full hover:bg-surface-container" id="drawer-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Navigation Items Mapping -->
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">info</span> About
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">hub</span> Ecosystem
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">business_center</span> Portfolio
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">analytics</span> Impact
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">volunteer_activism</span> Partner
+            </a>
+<a class="bg-secondary-container text-on-secondary-container rounded-lg font-bold flex items-center gap-4 p-4 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">mail</span> Contact
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">rss_feed</span> Updates
+            </a>
+</div>
+</nav>
+<main class="pt-24 pb-16 px-margin-mobile">
+<!-- Hero Section -->
+<section class="mb-12">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-trust-blue mb-4">Let's Connect</h2>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                Empowering Zambian entrepreneurs through strategic partnerships. Reach out to our team to join the Moovex ecosystem.
+            </p>
+</section>
+<!-- Contact Form Section -->
+<section class="mb-12">
+<div class="bg-surface-alt rounded-2xl p-6 border border-outline-variant/30 soft-shadow">
+<form class="flex flex-col gap-6" id="contact-form">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="name">Name</label>
+<input class="w-full bg-[#F8FAFC] border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all placeholder:text-outline/50" id="name" name="name" placeholder="Enter your full name" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="email">Email</label>
+<input class="w-full bg-[#F8FAFC] border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all placeholder:text-outline/50" id="email" name="email" placeholder="email@example.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="phone">Phone</label>
+<input class="w-full bg-[#F8FAFC] border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all placeholder:text-outline/50" id="phone" name="phone" placeholder="+260 ..." type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="org">Organization</label>
+<input class="w-full bg-[#F8FAFC] border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all placeholder:text-outline/50" id="org" name="org" placeholder="Your company or entity" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="message">Message</label>
+<textarea class="w-full bg-[#F8FAFC] border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all placeholder:text-outline/50" id="message" name="message" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="bg-growth-green text-on-primary font-label-md text-label-md py-4 rounded-lg soft-shadow active:scale-[0.98] transition-transform flex items-center justify-center gap-2" type="submit">
+                        Send Message
+                        <span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Info & Map Section -->
+<section class="grid grid-cols-1 gap-8 mb-12">
+<!-- Contact Details -->
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="bg-white p-3 rounded-lg soft-shadow">
+<span class="material-symbols-outlined text-secondary">mail</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Email Address</p>
+<p class="text-on-surface-variant">hello@moovex.zm</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="bg-white p-3 rounded-lg soft-shadow">
+<span class="material-symbols-outlined text-secondary">phone</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Phone Number</p>
+<p class="text-on-surface-variant">+260 211 123 456</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="bg-white p-3 rounded-lg soft-shadow">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Location</p>
+<p class="text-on-surface-variant">Lusaka Business Center, Lusaka, Zambia</p>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="relative w-full aspect-video rounded-2xl overflow-hidden soft-shadow bg-surface-variant border border-outline-variant/20">
+<div class="w-full h-full" data-location="Lusaka, Zambia" style="">
+<img class="w-full h-full object-cover grayscale-[20%] opacity-80" data-alt="A stylized aerial vector map of Lusaka, Zambia, featuring a clean minimalist aesthetic with soft gray roads and vibrant green park areas. The lighting is bright and optimistic, matching a professional corporate UI style. A single deep blue location pin marks the central business district. The overall mood is modern, connected, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2hos93aAJKFuVidb9FvbYiMfuUAKbfnxV2byW3rgDXHt3l8kjDZ5I06ZN1OkTqWP_OFYXPg1mq_tk1bNNcmJbkebARghjk9gW385N21aJWo2APiWhjbuQoGx7u_mNPC-cTuRPHn5iOVD9mnb01KDxI_yLZW7BOwCqRwVjcUiPeCcSrOexu5oSHMi9bFcmUEypPt5xpA3mzZrSS7sxlikRu0W6fV75DtNMiyx99XVjrV5ZqbiX2bprLEp43KErOIqsoZon1AN4Bog"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-secondary/10">
+<span class="w-3 h-3 bg-growth-green rounded-full animate-pulse"></span>
+<span class="font-label-md text-label-md text-trust-blue">Our HQ in Lusaka</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Media Section -->
+<section class="mb-12">
+<h3 class="font-headline-md text-headline-md text-trust-blue mb-6">Join Our Community</h3>
+<div class="flex gap-4">
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-trust-blue hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined fill-icon">face_nod</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-trust-blue hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined fill-icon">photo_camera</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-trust-blue hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined fill-icon">work</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-gutter bg-trust-blue dark:bg-on-primary-fixed text-on-primary font-body-md text-body-md">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-on-primary font-bold">Moovex</span>
+<p class="text-on-primary/70 max-w-xs">Building the future of Zambia's digital economy through entrepreneurship and innovation.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-1 gap-4">
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-on-primary mb-2 opacity-60">Company</h4>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">About Us</a>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Ecosystem</a>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Portfolio</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-on-primary mb-2 opacity-60">Engagement</h4>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Impact</a>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Partner With Us</a>
+<a class="text-growth-green" href="#">Contact Us</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-on-primary mb-2 opacity-60">Stay Updated</h4>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Latest Updates</a>
+</div>
+</div>
+<div class="pt-8 border-t border-on-primary/10 mt-8 md:col-span-4 text-center md:text-left">
+<p class="text-on-primary/60 text-label-sm font-label-sm">
+                © 2024 Moovex Zambia. Promoting entrepreneurship in Zambia.
+            </p>
+</div>
+</footer>
+<script>
+        // Drawer Logic
+        const drawerToggle = document.getElementById('drawer-toggle');
+        const drawerClose = document.getElementById('drawer-close');
+        const navDrawer = document.getElementById('nav-drawer');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer(open) {
+            if (open) {
+                navDrawer.classList.remove('-translate-x-full');
+                drawerOverlay.classList.remove('hidden');
+                setTimeout(() => drawerOverlay.classList.add('opacity-100'), 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                navDrawer.classList.add('-translate-x-full');
+                drawerOverlay.classList.remove('opacity-100');
+                setTimeout(() => {
+                    drawerOverlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+        }
+
+        drawerToggle.addEventListener('click', () => toggleDrawer(true));
+        drawerClose.addEventListener('click', () => toggleDrawer(false));
+        drawerOverlay.addEventListener('click', () => toggleDrawer(false));
+
+        // Form micro-interaction
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button');
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+            btn.classList.add('opacity-80', 'pointer-events-none');
+
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Message Sent!';
+                btn.classList.remove('bg-growth-green');
+                btn.classList.add('bg-trust-blue');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.add('bg-growth-green');
+                    btn.classList.remove('bg-trust-blue', 'opacity-80', 'pointer-events-none');
+                    contactForm.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Tonal layer scroll effect for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

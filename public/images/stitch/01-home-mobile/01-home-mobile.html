@@ -1,0 +1,390 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Moovex | Building Zambia's Entrepreneurship Ecosystem</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(30, 41, 59, 0.05);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid #F1F5F9;
+        }
+        .gradient-mesh {
+            background-color: #f8f9ff;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(34, 197, 94, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(251, 146, 60, 0.05) 0px, transparent 50%);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-alt": "#F8FAFC",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-tertiary-fixed-variant": "#783200",
+                    "surface-bright": "#f8f9ff",
+                    "on-surface": "#0b1c30",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-surface-variant": "#45464d",
+                    "inverse-primary": "#bec6e0",
+                    "trust-blue": "#1E293B",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "surface": "#f8f9ff",
+                    "outline-variant": "#c6c6cd",
+                    "surface-tint": "#565e74",
+                    "secondary": "#006c49",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary-container": "#341100",
+                    "on-secondary-fixed-variant": "#005236",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary-fixed": "#002113",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "surface-variant": "#d3e4fe",
+                    "on-tertiary-fixed": "#341100",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#6cf8bb",
+                    "on-background": "#0b1c30",
+                    "on-primary-container": "#7c839b",
+                    "surface-container": "#e5eeff",
+                    "tertiary": "#000000",
+                    "on-tertiary-container": "#d95f00",
+                    "on-secondary-container": "#00714d",
+                    "surface-dim": "#cbdbf5",
+                    "secondary-fixed": "#6ffbbe",
+                    "inverse-surface": "#213145",
+                    "tertiary-fixed": "#ffdbca",
+                    "growth-green": "#22C55E",
+                    "outline": "#76777d",
+                    "energy-orange": "#FB923C",
+                    "error": "#ba1a1a",
+                    "primary-container": "#131b2e",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#000000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "headline-xl": ["Outfit"],
+                    "headline-lg": ["Outfit"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Outfit"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-4 bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="font-headline-md text-headline-md font-bold text-trust-blue">Moovex</div>
+<button class="p-2 text-secondary active:opacity-80 active:scale-95 transition-all" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<!-- Mobile Navigation Drawer -->
+<div class="fixed inset-y-0 left-0 z-[60] w-80 bg-surface shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out p-6 space-y-4 rounded-r-xl" id="drawer">
+<div class="flex justify-between items-center mb-8">
+<div class="font-headline-md text-headline-md font-bold text-trust-blue">Moovex Ecosystem</div>
+<button class="p-2" id="drawer-close">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-4 p-3 bg-secondary-container text-on-secondary-container rounded-lg font-bold font-label-md text-label-md transition-transform duration-200 Active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span> About
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span> Ecosystem
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span> Portfolio
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span> Impact
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="volunteer_activism">volunteer_activism</span> Partner
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span> Contact
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span> Updates
+            </a>
+</nav>
+</div>
+<div class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[55] hidden opacity-0 transition-opacity" id="drawer-overlay"></div>
+<main class="pt-16 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex flex-col justify-center px-margin-mobile pt-12 pb-24 gradient-mesh">
+<div class="max-w-md transition-all duration-700 opacity-100 translate-y-0">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-trust-blue mb-6 leading-tight">
+                    Building Zambia’s <span class="text-secondary">Entrepreneurship</span> Ecosystem
+                </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+                    Connecting visionary leaders with strategic guidance and investment to catalyze sustainable growth across the Zambian landscape.
+                </p>
+<div class="flex flex-col gap-4">
+<button class="bg-growth-green text-on-primary font-label-md text-label-md py-4 px-8 rounded-lg shadow-lg shadow-growth-green/20 hover:scale-[1.02] transition-all active:scale-95 text-center">
+                        Explore Our Ecosystem
+                    </button>
+<button class="border border-trust-blue text-trust-blue font-label-md text-label-md py-4 px-8 rounded-lg hover:bg-trust-blue/5 transition-all active:scale-95 text-center">
+                        Partner With Us
+                    </button>
+</div>
+</div>
+<!-- Hero Decorative Image -->
+<div class="mt-16 relative transition-all duration-700 opacity-100 translate-y-0">
+<div class="aspect-square rounded-2xl overflow-hidden soft-shadow">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-quality photograph of a modern co-working space in Lusaka, Zambia. The scene features diverse local entrepreneurs collaborating around clean, wooden tables. Soft sunlight filters through large windows, illuminating a bright and optimistic atmosphere. The aesthetic is professional yet warm, incorporating natural textures and a vibrant Zambian professional energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_hoHR4d5BJ2tvjmjJXngZXHzUSGvepMmLHLDocdce7qlz6q95-VOa1xEiRn73Pq52OhHcXoj2StS-YyZl8a1TUwtP5n7YIybMEwRPTeM7JEBvHoaqkbDmTjK0R5x5Zu6agJVcC2P57egcROz4-DDOQ4NLG0d8qt248epapQfv-9IT_MGR32Mb7NxDlUezPCMlal6kNjnX_It9UeJhapVC0DfwwwC6UF3klwGmVnMqUYcSDqHFVDueoUWulE6nGU3ImvzfluhEfqo">
+</div>
+<div class="absolute -bottom-6 -right-4 glass-card p-4 rounded-xl soft-shadow flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-energy-orange flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<div>
+<div class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Market Growth</div>
+<div class="font-headline-md text-headline-md text-trust-blue">+24% YoY</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Short Intro -->
+<section class="py-20 px-margin-mobile bg-white">
+<div class="max-w-md mx-auto text-center transition-all duration-700 opacity-100 translate-y-0">
+<div class="w-12 h-1 bg-growth-green mx-auto mb-8"></div>
+<h2 class="font-headline-md text-headline-md text-trust-blue mb-6">Our Mission</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed italic">
+                    "Promoting entrepreneurship in Zambia by bridging the gap between local innovation and global excellence through practical support and structural connectivity."
+                </p>
+</div>
+</section>
+<!-- Ecosystem Explanation -->
+<section class="py-20 px-margin-mobile bg-surface-alt">
+<div class="max-w-md mx-auto transition-all duration-700 opacity-100 translate-y-0">
+<span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm mb-4">How We Work</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-trust-blue mb-6">A Connected Ecosystem</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                    Moovex acts as the central hub, weaving together diverse businesses across sectors to create a resilient economic fabric. We don't just invest; we integrate, ensuring that every venture contributes to and benefits from the collective strength of the Zambian market.
+                </p>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 shrink-0 rounded-lg bg-white flex items-center justify-center text-secondary soft-shadow">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-trust-blue mb-1">Strategic Connectivity</h3>
+<p class="text-sm text-on-surface-variant">Forging partnerships that expand market reach and resource sharing.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 shrink-0 rounded-lg bg-white flex items-center justify-center text-energy-orange soft-shadow">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-trust-blue mb-1">Institutional Support</h3>
+<p class="text-sm text-on-surface-variant">Providing the governance and structural stability needed for scale.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Preview -->
+<section class="py-20 px-margin-mobile">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-trust-blue mb-10">Our Portfolio</h2>
+<div class="grid grid-cols-1 gap-6 transition-all duration-700 opacity-100 translate-y-0">
+<!-- Card 1: Chomaya -->
+<div class="bg-white rounded-2xl p-6 border border-[#F1F5F9] soft-shadow group transition-all active:scale-95"><div class="flex justify-between items-start mb-6"><div class="w-12 h-12 rounded-xl bg-growth-green/10 flex items-center justify-center text-growth-green"><span class="material-symbols-outlined" data-icon="agriculture">agriculture</span></div><span class="text-[10px] font-bold uppercase tracking-widest text-growth-green bg-growth-green/10 px-2 py-1 rounded">Ecosystem Partner</span></div><div class="mb-1"><span class="text-label-sm text-secondary font-bold uppercase tracking-wider">Logistics &amp; Supply Chain</span></div><h3 class="font-headline-md text-headline-md text-trust-blue mb-2">Chomaya</h3><p class="text-sm text-on-surface-variant mb-4">Microfuel and fuel-management solutions for PSV drivers, taxis, buses, and transport operators.</p><div class="flex flex-wrap gap-2 mb-6"><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#Microfuel</span><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#LastMile</span><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#FuelManagement</span></div><div class="pt-4 border-t border-outline-variant/30 mb-6"><div class="text-[10px] uppercase text-on-surface-variant/60 font-bold mb-1">Impact Area</div><div class="text-sm font-bold text-trust-blue">Transport Efficiency</div></div><button class="w-full py-3 px-4 bg-trust-blue text-white rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-trust-blue/90 transition-all">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></button></div>
+<!-- Card 2: GetPro -->
+<div class="bg-white rounded-2xl p-6 border border-[#F1F5F9] soft-shadow group transition-all active:scale-95"><div class="flex justify-between items-start mb-6"><div class="w-12 h-12 rounded-xl overflow-hidden shrink-0"><img src="https://lh3.googleusercontent.com/aida/AP1WRLs0Hj25NWAfRZlwp8_V0m4OpVclBN6tGpAL8w3S2osdlg-YAQe-QA_QgStVldsPQ_mmlmif06t02Dx2nfsvREBKgqbmGATeVwl-NyFA5l3xRlOnMS9oVa8tLHEKzHiy-LSJ1085bxL0K-1ULINPNYn3GaHfl1prlaHcTJH-GONIJ2MDkeKqmCEzx5LfAf9cebkiWMBD4N7CSMlpqJmGyH560RNrFpJNwoD1Wg5DQy9hTUiBGnVC2JIWHk4" class="w-full h-full object-cover" alt="GetPro Representative"></div><span class="text-[10px] font-bold uppercase tracking-widest text-growth-green bg-growth-green/10 px-2 py-1 rounded">Ecosystem Partner</span></div><div class="mb-1"><span class="text-label-sm text-secondary font-bold uppercase tracking-wider">Professional Services</span></div><h3 class="font-headline-md text-headline-md text-trust-blue mb-2">GetPro</h3><p class="text-sm text-on-surface-variant mb-4">Connecting top-tier professional talent with high-impact project opportunities.</p><div class="flex flex-wrap gap-2 mb-6"><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#DigitalAgency</span><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#IT Systems</span><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#Digitalization</span></div><div class="pt-4 border-t border-outline-variant/30 mb-6"><div class="text-[10px] uppercase text-on-surface-variant/60 font-bold mb-1">Impact Area</div><div class="text-sm font-bold text-trust-blue">Digitalization and Growth</div></div><button class="w-full py-3 px-4 bg-trust-blue text-white rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-trust-blue/90 transition-all">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></button></div>
+<!-- Card 3: Facha -->
+<div class="bg-white rounded-2xl p-6 border border-[#F1F5F9] soft-shadow group transition-all active:scale-95"><div class="flex justify-between items-start mb-6"><div class="w-12 h-12 rounded-xl bg-energy-orange/10 flex items-center justify-center text-energy-orange"><span class="material-symbols-outlined" data-icon="construction">construction</span></div><span class="text-[10px] font-bold uppercase tracking-widest text-growth-green bg-growth-green/10 px-2 py-1 rounded">Ecosystem Partner</span></div><div class="mb-1"><span class="text-label-sm text-secondary font-bold uppercase tracking-wider">Infrastructure &amp; Tech</span></div><h3 class="font-headline-md text-headline-md text-trust-blue mb-2">Facha</h3><p class="text-sm text-on-surface-variant mb-4">Stationery, internet café, wholesale drinks, and e-banking services including Airtel, MTN, Zamtel, Zanaco, FNB, and Indo-Zambia Bank services.</p><div class="flex flex-wrap gap-2 mb-6"><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#E-Banking</span><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#Stationery</span><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#Wholesale</span></div><div class="pt-4 border-t border-outline-variant/30 mb-6"><div class="text-[10px] uppercase text-on-surface-variant/60 font-bold mb-1">Impact Area</div><div class="text-sm font-bold text-trust-blue">Ebanking, Wholesale</div></div><button class="w-full py-3 px-4 bg-trust-blue text-white rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-trust-blue/90 transition-all">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></button></div>
+<!-- Card 4: Netra -->
+<div class="bg-white rounded-2xl p-6 border border-[#F1F5F9] soft-shadow group transition-all active:scale-95"><div class="flex justify-between items-start mb-6"><div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary"><span class="material-symbols-outlined" data-icon="monitoring">monitoring</span></div><span class="text-[10px] font-bold uppercase tracking-widest text-growth-green bg-growth-green/10 px-2 py-1 rounded">Ecosystem Partner</span></div><div class="mb-1"><span class="text-label-sm text-secondary font-bold uppercase tracking-wider">Data Analytics</span></div><h3 class="font-headline-md text-headline-md text-trust-blue mb-2">Netra</h3><p class="text-sm text-on-surface-variant mb-4">Commercial property management company working with shopping complexes to improve operations, tenant performance, customer traffic, and revenue.<br></p><div class="flex flex-wrap gap-2 mb-6"><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#PropertyManagement</span><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#RevenueStreams</span><span class="text-[10px] font-medium text-on-surface-variant bg-surface-alt px-2 py-0.5 rounded border border-outline-variant">#BusinessDevelopement<br></span></div><div class="pt-4 border-t border-outline-variant/30 mb-6"><div class="text-[10px] uppercase text-on-surface-variant/60 font-bold mb-1">Impact Area</div><div class="text-sm font-bold text-trust-blue">Revenue channels developement</div></div><button class="w-full py-3 px-4 bg-trust-blue text-white rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-trust-blue/90 transition-all">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></button></div>
+</div>
+</section>
+<!-- Impact Metrics -->
+<section class="py-24 px-margin-mobile bg-trust-blue text-on-primary">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile mb-12 text-center">Impact in Zambia</h2>
+<div class="grid grid-cols-2 gap-y-12 gap-x-6 text-center transition-all duration-700 opacity-100 translate-y-0 opacity-0 translate-y-8">
+<div>
+<div class="font-headline-xl text-headline-xl text-energy-orange mb-1">50+</div>
+<div class="font-label-md text-label-md text-on-primary/60">Entrepreneurs</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-energy-orange mb-1">12</div>
+<div class="font-label-md text-label-md text-on-primary/60">Companies</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-energy-orange mb-1">20</div>
+<div class="font-label-md text-label-md text-on-primary/60">Communities</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-energy-orange mb-1">450+</div>
+<div class="font-label-md text-label-md text-on-primary/60">Jobs Created</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-margin-mobile bg-white">
+<div class="relative bg-surface-container-low rounded-2xl p-8 overflow-hidden transition-all duration-700 opacity-100 translate-y-0 opacity-0 translate-y-8">
+<div class="absolute top-0 right-0 w-32 h-32 bg-growth-green/10 rounded-full -mr-16 -mt-16"></div>
+<div class="relative z-10">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-trust-blue mb-6">Support Practical Entrepreneurship in Zambia</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10">
+                        Join us in building a sustainable future. Whether as a partner or a curious innovator, your journey with Moovex starts here.
+                    </p>
+<div class="flex flex-col gap-4">
+<button class="bg-growth-green text-on-primary font-label-md text-label-md py-4 px-8 rounded-lg shadow-lg shadow-growth-green/20 active:scale-95 transition-all text-center">
+                            Partner With Us
+                        </button>
+<button class="bg-white border border-trust-blue text-trust-blue font-label-md text-label-md py-4 px-8 rounded-lg active:scale-95 transition-all text-center">
+                            Contact Our Team
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile grid grid-cols-1 gap-stack-lg bg-trust-blue text-on-primary">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md text-on-primary">Moovex</div>
+<p class="text-on-primary/70 text-sm leading-relaxed">
+                Dedicated to fostering a robust entrepreneurial climate in Zambia through strategic investment and operational excellence.
+            </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-primary/50">Quick Links</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">About Us</a>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Ecosystem</a>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Portfolio</a>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Impact</a>
+<a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="#">Partner With Us</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-primary/50">Connect</h4>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="alternate_email">alternate_email</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 mt-8">
+<p class="font-body-md text-[12px] text-on-primary/50 leading-relaxed">
+                © 2024 Moovex Zambia. Promoting entrepreneurship in Zambia.
+            </p>
+</div>
+</footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const drawerClose = document.getElementById('drawer-close');
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function openDrawer() {
+            drawer.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.remove('opacity-100');
+            setTimeout(() => overlay.classList.add('hidden'), 300);
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openDrawer);
+        drawerClose.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(el);
+        });
+    </script>
+
+
+
+
+</body></html>

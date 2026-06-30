@@ -1,0 +1,88 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="Moovex home">
+      <span class="logo-text">Moovex</span>
+      <span class="logo-sub">
+        <strong>Moovex</strong>
+        <small>Entrepreneurship Ecosystem</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <div class="nav-drawer-head">
+        <span class="nav-drawer-title">Moovex Ecosystem</span>
+        <button class="nav-drawer-close" type="button" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="nav-drawer-links">
+        <a class="nav-link <%= activePage === 'home' ? 'active' : '' %>" href="/">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"></path></svg>
+          </span>
+          Home
+        </a>
+        <a class="nav-link <%= activePage === 'about' ? 'active' : '' %>" href="/about">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+          </span>
+          About
+        </a>
+        <a class="nav-link <%= activePage === 'ecosystem' ? 'active' : '' %>" href="/ecosystem">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7l3-7z"></path></svg>
+          </span>
+          Ecosystem
+        </a>
+        <a class="nav-link <%= activePage === 'portfolio' ? 'active' : '' %>" href="/portfolio">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 16V8h4v8h4V4H6v12h4zm9-12h-4v2h4v12h-4v2h6V4h-2z"></path></svg>
+          </span>
+          Portfolio
+        </a>
+        <a class="nav-link <%= activePage === 'impact' ? 'active' : '' %>" href="/impact">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v8H3v-8zm4-4h2v12H7V9zm4-4h2v16h-2V5zm4 6h2v10h-2V11zm4-4h2v14h-2V7z"></path></svg>
+          </span>
+          Impact
+        </a>
+        <a class="nav-link <%= activePage === 'partner' ? 'active' : '' %>" href="/partner">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35zm7-4.27A9.794 9.794 0 0020 8.5a9.794 9.794 0 00-1-8.58A7.152 7.152 0 0112 5.25 7.152 7.152 0 015 8.5a9.794 9.794 0 00-1 8.58 7.152 7.152 0 016 1.23 7.152 7.152 0 006-1.23z"></path></svg>
+          </span>
+          Partner
+        </a>
+        <a class="nav-link <%= activePage === 'contact' ? 'active' : '' %>" href="/contact">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+          </span>
+          Contact
+        </a>
+        <a class="nav-link <%= activePage === 'updates' ? 'active' : '' %>" href="/updates">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18c0 .55.45 1 1 1h1v3.5L11.5 19H16c2.21 0 4-1.79 4-4V7H6v11zM20 3H4v10h16V3z"></path></svg>
+          </span>
+          Updates
+        </a>
+      </div>
+    </nav>
+
+    <div class="nav-overlay" aria-hidden="true"></div>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="main-nav">
+      <span class="nav-toggle-icon nav-toggle-open" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </span>
+      <span class="nav-toggle-icon nav-toggle-close" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </span>
+    </button>
+  </div>
+</header>

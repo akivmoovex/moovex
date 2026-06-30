@@ -1,0 +1,341 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Updates | Moovex Zambia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-alt": "#F8FAFC",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-tertiary-fixed-variant": "#783200",
+                    "surface-bright": "#f8f9ff",
+                    "on-surface": "#0b1c30",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-surface-variant": "#45464d",
+                    "inverse-primary": "#bec6e0",
+                    "trust-blue": "#1E293B",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "surface": "#f8f9ff",
+                    "outline-variant": "#c6c6cd",
+                    "surface-tint": "#565e74",
+                    "secondary": "#006c49",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary-container": "#341100",
+                    "on-secondary-fixed-variant": "#005236",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary-fixed": "#002113",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "surface-variant": "#d3e4fe",
+                    "on-tertiary-fixed": "#341100",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#6cf8bb",
+                    "on-background": "#0b1c30",
+                    "on-primary-container": "#7c839b",
+                    "surface-container": "#e5eeff",
+                    "tertiary": "#000000",
+                    "on-tertiary-container": "#d95f00",
+                    "on-secondary-container": "#00714d",
+                    "surface-dim": "#cbdbf5",
+                    "secondary-fixed": "#6ffbbe",
+                    "inverse-surface": "#213145",
+                    "tertiary-fixed": "#ffdbca",
+                    "growth-green": "#22C55E",
+                    "outline": "#76777d",
+                    "energy-orange": "#FB923C",
+                    "error": "#ba1a1a",
+                    "primary-container": "#131b2e",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#000000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "headline-xl": ["Outfit"],
+                    "headline-lg": ["Outfit"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Outfit"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .coming-soon-overlay {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+        }
+        .active-nav-indicator {
+            position: relative;
+        }
+        .active-nav-indicator::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-gutter py-4 bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-4">
+<button class="p-2 text-secondary dark:text-secondary-fixed Active:opacity-80 scale-95 transition-all" id="drawer-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-trust-blue dark:text-on-primary">Moovex</h1>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors" href="#">Ecosystem</a>
+<a class="text-secondary font-bold border-b-2 border-secondary font-label-md text-label-md" href="#">Updates</a>
+</div>
+</header>
+<!-- NavigationDrawer (Mobile Overlay) -->
+<div class="fixed inset-0 bg-black/40 z-[55] opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-overlay"></div>
+<aside class="fixed inset-y-0 left-0 z-[60] p-6 space-y-4 bg-surface dark:bg-on-primary-fixed h-full w-80 rounded-r-xl shadow-2xl -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="flex justify-between items-center mb-8">
+<span class="font-headline-md text-headline-md font-bold text-trust-blue">Moovex Ecosystem</span>
+<button class="p-2" id="drawer-close"><span class="material-symbols-outlined">close</span></button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">info</span> About
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">hub</span> Ecosystem
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">business_center</span> Portfolio
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span> Impact
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">volunteer_activism</span> Partner
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span> Contact
+            </a>
+<a class="flex items-center gap-4 p-3 bg-secondary-container text-on-secondary-container rounded-lg font-bold font-label-md text-label-md Active:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">rss_feed</span> Updates
+            </a>
+</nav>
+</aside>
+<main class="pt-24 pb-section-gap px-margin-mobile">
+<!-- Header Section -->
+<header class="mb-stack-lg max-w-xl mx-auto">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-trust-blue mb-2">Latest Updates</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Stay informed about our growing ecosystem and the impact we're making across Zambia.</p>
+</header>
+<!-- Blog Categories Scroller -->
+<div class="flex gap-2 overflow-x-auto pb-4 mb-stack-lg -mx-margin-mobile px-margin-mobile no-scrollbar">
+<span class="shrink-0 px-4 py-2 rounded-full bg-secondary text-on-primary font-label-md text-label-md">All Updates</span>
+<span class="shrink-0 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Entrepreneurship</span>
+<span class="shrink-0 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Company Updates</span>
+<span class="shrink-0 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Impact Stories</span>
+<span class="shrink-0 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Partnerships</span>
+</div>
+<!-- Blog Listings (Bento/Card Mix) -->
+<div class="grid grid-cols-1 gap-6 max-w-xl mx-auto">
+<!-- Featured Card (Simulated Active) -->
+<article class="group relative bg-white border border-outline-variant/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-surface-container-low relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant wide shot of a modern business hub in Lusaka, Zambia. Entrepreneurs are seen collaborating in a bright, sunlit open-plan office with local Zambian art on the walls. The lighting is warm and professional, emphasizing a communal growth atmosphere in the Moovex ecosystem. High-end architectural photography style with a soft blue morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoOvuTqv540uWMNK_9OIjM4dUNmtEEnHTTPBZzQhWyuAKvBztRfYW-Lcz1ejFVeEy4AipHKYsWo361S9-h3H52M5l3FlDPXuMjzLdYB9W072FkCzxYMkcOfWjn9Nzwz-q_wIKXNLJST0uM-dbF3V0-PGkt3eP6KsS_ZgVOAMv3MUNxqJpT2PS6fLqhXEDnmz6EenpumcyQfXIjxFw1NGI63oas5D5MCWP_zl289GXspzzyu9yDaNAUndo7JbjUdLLXL4qAMRRgno8">
+<div class="absolute top-4 left-4">
+<span class="bg-growth-green text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm shadow-sm">Featured</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="">May 24, 2024</span>
+<span class="mx-1">•</span>
+<span class="">Entrepreneurship</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-trust-blue mb-3 group-hover:text-secondary transition-colors">Empowering the Next Generation of Zambian Agri-Tech</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">Moovex is proud to announce its latest investment cycle focusing on sustainable agriculture technology that addresses food security challenges in the Copperbelt region.</p>
+<a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md hover:underline" href="#">
+                        Read More <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Optional/Coming Soon Style Cards -->
+<div class="relative group">
+<article class="bg-white/50 border border-outline-variant/20 rounded-2xl p-6 opacity-60">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="">June 2024</span>
+<span class="mx-1">•</span>
+<span class="">Impact Stories</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-trust-blue mb-2">Clean Energy for Rural Communities</h3>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">How Moovex partnered with local solar startups to bring power to remote villages in Zambia's Western Province.</p>
+</article>
+<!-- Coming Soon Overlay -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-surface/40 backdrop-blur-[2px] rounded-2xl border border-dashed border-outline-variant group-hover:opacity-100 transition-opacity">
+<div class="bg-white/90 px-4 py-2 rounded-xl shadow-lg border border-surface-container-high">
+<span class="material-symbols-outlined text-energy-orange block mb-1">hourglass_top</span>
+<span class="text-trust-blue font-bold font-label-md text-label-md uppercase tracking-wider">Coming Soon</span>
+</div>
+</div>
+</div>
+<article class="bg-white border border-outline-variant/30 rounded-2xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<span class="bg-surface-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm">Company Updates</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">May 15, 2024</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-trust-blue mb-3">Expanding our Lusaka HQ</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Our new facilities will feature a dedicated accelerator wing for tech-based startups, doubling our capacity to host incubator events.</p>
+<a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md" href="#">
+                    Read More <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+<div class="relative group">
+<article class="bg-white/50 border border-outline-variant/20 rounded-2xl p-6 opacity-60">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="">Upcoming</span>
+<span class="mx-1">•</span>
+<span class="">Partnerships</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-trust-blue mb-2">International Donor Symposium 2024</h3>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">Moovex to represent Zambian entrepreneurship at the upcoming Pan-African Investment Summit.</p>
+</article>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-surface/40 backdrop-blur-[2px] rounded-2xl border border-dashed border-outline-variant">
+<div class="bg-white/90 px-4 py-2 rounded-xl shadow-lg border border-surface-container-high">
+<span class="material-symbols-outlined text-energy-orange block mb-1">lock</span>
+<span class="text-trust-blue font-bold font-label-md text-label-md uppercase tracking-wider">Optional Future Use</span>
+</div>
+</div>
+</div>
+<article class="bg-white border border-outline-variant/30 rounded-2xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<span class="bg-surface-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm">Zambia Business Ecosystem</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">May 02, 2024</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-trust-blue mb-3">State of Local Entrepreneurship Report</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Analyzing the trends and opportunities for small to medium enterprises in the Zambian market for Q2 2024.</p>
+<a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md" href="#">
+                    Download Report <span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</article>
+</div>
+<!-- Load More / Pagination Simulation -->
+<div class="mt-stack-lg text-center">
+<button class="px-8 py-3 bg-white border border-secondary text-secondary rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+                View Past Updates
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-gutter bg-trust-blue dark:bg-on-primary-fixed text-on-primary">
+<div class="space-y-4">
+<h4 class="font-headline-md text-headline-md text-on-primary">Moovex</h4>
+<p class="text-on-primary/80 font-body-md text-body-md max-w-xs">Building sustainable pathways for Zambian entrepreneurs to thrive in a global economy.</p>
+</div>
+<div class="space-y-2">
+<h5 class="font-label-md text-label-md uppercase tracking-wider mb-4 opacity-60">Quick Links</h5>
+<ul class="space-y-2">
+<li class=""><a class="text-on-primary/80 hover:text-on-primary font-body-md text-body-md block hover:translate-x-1 transition-transform" href="#">About Us</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-on-primary font-body-md text-body-md block hover:translate-x-1 transition-transform" href="#">Ecosystem</a></li>
+<li class=""><a class="text-growth-green font-bold font-body-md text-body-md block hover:translate-x-1 transition-transform" href="#">Latest Updates</a></li>
+</ul>
+</div>
+<div class="space-y-2">
+<h5 class="font-label-md text-label-md uppercase tracking-wider mb-4 opacity-60">Support</h5>
+<ul class="space-y-2">
+<li class=""><a class="text-on-primary/80 hover:text-on-primary font-body-md text-body-md block hover:translate-x-1 transition-transform" href="#">Contact Us</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-on-primary font-body-md text-body-md block hover:translate-x-1 transition-transform" href="#">Impact Stories</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-on-primary font-body-md text-body-md block hover:translate-x-1 transition-transform" href="#">Partner With Us</a></li>
+</ul>
+</div>
+<div class="pt-8 md:pt-0 border-t border-white/10 md:border-t-0">
+<p class="text-on-primary/60 font-label-sm text-label-sm">© 2024 Moovex Zambia. Promoting entrepreneurship in Zambia.</p>
+</div>
+</footer>
+<script>
+        const drawerToggle = document.getElementById('drawer-toggle');
+        const drawerClose = document.getElementById('drawer-close');
+        const navDrawer = document.getElementById('nav-drawer');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            navDrawer.classList.toggle('-translate-x-full');
+            drawerOverlay.classList.toggle('opacity-0');
+            drawerOverlay.classList.toggle('pointer-events-none');
+        }
+
+        drawerToggle.addEventListener('click', toggleDrawer);
+        drawerClose.addEventListener('click', toggleDrawer);
+        drawerOverlay.addEventListener('click', toggleDrawer);
+
+        // Active State Check Logic
+        // This simulates picking "Updates" as the active tab for this specific page
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.innerText.includes('Updates')) {
+                link.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-bold');
+                link.classList.remove('text-on-surface-variant');
+            }
+        });
+    </script>
+
+
+</body></html>

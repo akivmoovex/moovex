@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moovex | Our Impact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .impact-card-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(241,245,249,1) 100%);
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-alt": "#F8FAFC",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "background": "#f8f9ff",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "surface-bright": "#f8f9ff",
+                        "on-surface": "#0b1c30",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-surface-variant": "#45464d",
+                        "inverse-primary": "#bec6e0",
+                        "trust-blue": "#1E293B",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "surface": "#f8f9ff",
+                        "outline-variant": "#c6c6cd",
+                        "surface-tint": "#565e74",
+                        "secondary": "#006c49",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-container": "#341100",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-variant": "#d3e4fe",
+                        "on-tertiary-fixed": "#341100",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#6cf8bb",
+                        "on-background": "#0b1c30",
+                        "on-primary-container": "#7c839b",
+                        "surface-container": "#e5eeff",
+                        "tertiary": "#000000",
+                        "on-tertiary-container": "#d95f00",
+                        "on-secondary-container": "#00714d",
+                        "surface-dim": "#cbdbf5",
+                        "secondary-fixed": "#6ffbbe",
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed": "#ffdbca",
+                        "growth-green": "#22C55E",
+                        "outline": "#76777d",
+                        "energy-orange": "#FB923C",
+                        "error": "#ba1a1a",
+                        "primary-container": "#131b2e",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-xl": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-4 bg-surface/95 glass-header shadow-sm">
+<div class="font-headline-md text-headline-md font-bold text-trust-blue dark:text-on-primary">Moovex</div>
+<button class="text-secondary p-2" id="menuToggle">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</header>
+<!-- Side Drawer (Mobile Overlay) -->
+<div class="fixed inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300" id="drawerOverlay"></div>
+<nav class="fixed inset-y-0 left-0 z-[60] w-80 bg-surface dark:bg-on-primary-fixed shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-6" id="navDrawer">
+<div class="flex justify-between items-center mb-8">
+<span class="font-headline-md text-headline-md font-bold text-trust-blue">Moovex Ecosystem</span>
+<button class="p-1" id="closeDrawer"><span class="material-symbols-outlined">close</span></button>
+</div>
+<div class="space-y-2">
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">info</span> About
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">hub</span> Ecosystem
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">business_center</span> Portfolio
+            </a>
+<!-- Active Navigation -->
+<a class="flex items-center gap-4 p-4 bg-secondary-container text-on-secondary-container rounded-lg font-bold font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">analytics</span> Impact
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">volunteer_activism</span> Partner
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">mail</span> Contact
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">rss_feed</span> Updates
+            </a>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="px-margin-mobile py-stack-lg">
+<div class="relative overflow-hidden rounded-2xl bg-trust-blue text-on-primary p-8 min-h-[300px] flex flex-col justify-end">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="w-full h-full" data-alt="A cinematic, low-angle shot of a vibrant Zambian marketplace at sunrise. The warm, golden light flares across the lens, illuminating active entrepreneurs setting up colorful stalls. The background shows a soft-focus urban skyline, representing the bridge between traditional commerce and modern economic growth. High-contrast, premium photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYADcT_jilPND8fHTB8bwJTgcMx-UpgkVaV8dVLq93MBtIy8q2nyJVzwkcRWs0Hmdm5OPBTHaUJ_OO73BDQOLcDX_McNSi6uA61qQtWqSQTPNxNmGnozqJsPPr17MVg3Gz5bNrUz0nmmYFHslOLA1QkD2UaKdio-dDjqBThn7q-yVDF_McDSw0vrb9TCL7IEuC55jH3tPH1d101Surl2pNQ5g95agPIFefsbavvOc90KmFLsjJFyHmQVANnuyY_Zga3ii3vhX5lWk')"></div>
+</div>
+<div class="relative z-10">
+<span class="inline-block py-1 px-3 bg-growth-green text-on-primary rounded-full text-label-sm font-label-sm mb-4">Maturity & Growth</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Our Impact</h1>
+<p class="font-body-md text-body-md opacity-90 max-w-xs">Building the foundations of Zambia's future economy through structured support.</p>
+</div>
+</div>
+</section>
+<!-- Impact Introduction -->
+<section class="px-margin-mobile py-10 text-center">
+<h2 class="font-headline-md text-headline-md text-trust-blue mb-4">Creating Connected Businesses</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed px-4">
+                Moovex isn't just about funding; it's about architecture. We transform fragmented ideas into organized, connected, and scalable businesses that drive sustainable employment across Zambia.
+            </p>
+</section>
+<!-- Impact Metrics: Bento Style -->
+<section class="px-margin-mobile py-stack-lg space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="col-span-1 p-6 impact-card-gradient border border-outline-variant rounded-2xl shadow-sm text-center">
+<div class="w-12 h-12 bg-surface-container-low text-growth-green rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined">business_center</span>
+</div>
+<div class="font-headline-md text-headline-md text-energy-orange mb-1">120+</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Companies Supported</div>
+</div>
+<!-- Card 2 -->
+<div class="col-span-1 p-6 impact-card-gradient border border-outline-variant rounded-2xl shadow-sm text-center">
+<div class="w-12 h-12 bg-surface-container-low text-growth-green rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div class="font-headline-md text-headline-md text-energy-orange mb-1">450+</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Entrepreneurs Advised</div>
+</div>
+</div>
+<!-- Large Metric Card -->
+<div class="p-8 bg-surface-container-low border border-outline-variant rounded-2xl shadow-sm flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-white shadow-md text-secondary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" style="font-size: 32px;">payments</span>
+</div>
+<div class="font-headline-xl text-headline-xl text-trust-blue mb-2">$2.4M</div>
+<div class="font-body-md text-body-md text-on-surface-variant mb-4">In Direct Capital Catalyzed for Local SMBs</div>
+<div class="w-full h-2 bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-growth-green w-[85%]"></div>
+</div>
+<div class="w-full flex justify-between mt-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>Target: $2.8M</span>
+<span>85% Achieved</span>
+</div>
+</div>
+</section>
+<!-- Entrepreneur Stories -->
+<section class="bg-surface-alt py-16 px-margin-mobile">
+<div class="mb-8">
+<h2 class="font-headline-md text-headline-md text-trust-blue mb-2 text-center">Voices of Growth</h2>
+<p class="text-center font-body-md text-body-md text-on-surface-variant">Real stories from the Moovex ecosystem.</p>
+</div>
+<div class="relative group overflow-hidden rounded-2xl border border-outline-variant bg-white">
+<div class="h-48 w-full bg-cover bg-center" data-alt="A close-up portrait of a confident young Zambian woman entrepreneur smiling in her modern, clean technology office. She is wearing professional attire with a traditional textile accent. The background shows blurred digital screens and a collaborative workspace, conveying success, innovation, and local pride. Bright, clean lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOHhGoUbt1mhcz1GJLoLiXFcx_Zc65tK7y_frr1sxLMZ96-zBK2moyK7EPVpCyHjOa4kyI06QnowxZBfgQvWarK7ue93OxMEapO47ceD98NHhDhkjWeVM7-8E7VtkmnnIE7_wjfvpufyed6ctkPUd3fDgHq6PjnT5Bs9L6w4HUUdT9DPH_Mrk-e2DcU1QZ-uUg75g95AyP32wM8VGe9-pa6WoMEGeYe558SQLlTbuZhB0Y4ZU3781UZ1rdTCUGyQr5JOe60GGYDVM')"></div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-energy-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-trust-blue uppercase tracking-wider">Success Spotlight</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-trust-blue mb-3">AgriTech Solutions Ltd.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Moovex helped us transition from a local farm to a national digital distributor. Their structural advice was the missing piece of our puzzle."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 rounded-full bg-surface-container">
+<img class="w-full h-full object-cover rounded-full" data-alt="Profile headshot of a professional man in his 40s, looking approachable and intelligent. He is against a simple studio background. Professional corporate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4zYrMYQGLivqtjei0eDTBUIlYUFjIu_CuV16gqWDOqmIbjKi4gUTgujuXMoI_D33sGh2xoi_RhsgTGdetTMRmsV4-lN5Y_N8JThtVvid2WruxxwBP7yp6wSHuFYVmLymHtSgk7e4ofbrPwMpQ_RJEhGVeIH6gRguWUSgj6wibyWIzb23RsL7TxMkmYQVAZE_Ndlu1e2XmlwAfU2B2cmJfw8QsV3Ii--o_duzHWEll03lf4kwMQLXuo5gUydLGv5eq3_Zju4qmUaM"/>
+</div>
+<div>
+<div class="font-label-md text-label-md text-trust-blue">Chanda Mwewa</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant">Founder & CEO</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Donation Impact Examples -->
+<section class="px-margin-mobile py-16">
+<div class="bg-trust-blue rounded-3xl p-8 text-on-primary">
+<h2 class="font-headline-md text-headline-md mb-6">Your Support in Action</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-growth-green/20 border border-growth-green flex items-center justify-center">
+<span class="material-symbols-outlined text-growth-green">school</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-1">Specialized Training</h4>
+<p class="text-on-primary/70 text-body-md font-body-md">Sustaining 20+ hours of technical mentorship for emerging tech leaders.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-growth-green/20 border border-growth-green flex items-center justify-center">
+<span class="material-symbols-outlined text-growth-green">devices</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-1">Digital Infrastructure</h4>
+<p class="text-on-primary/70 text-body-md font-body-md">Providing cloud credits and essential CRM tools to streamline operations.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-growth-green/20 border border-growth-green flex items-center justify-center">
+<span class="material-symbols-outlined text-growth-green">work</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-1">Job Creation</h4>
+<p class="text-on-primary/70 text-body-md font-body-md">Funding internship programs that lead to full-time career placement.</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-10 bg-growth-green text-on-primary py-4 rounded-xl font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-lg">
+                    Partner With Us
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile bg-trust-blue dark:bg-on-primary-fixed text-on-primary grid grid-cols-1 gap-gutter">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md text-on-primary font-bold">Moovex</div>
+<p class="text-on-primary/80 font-body-md text-body-md">Moovex Zambia. Promoting entrepreneurship in Zambia through institutional excellence and community action.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-growth-green uppercase">Ecosystem</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">About Us</a></li>
+<li><a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Impact Report 2023</a></li>
+<li><a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Portfolio Companies</a></li>
+<li><a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Latest Updates</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-growth-green uppercase">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-growth-green transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-growth-green transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 text-on-primary/60 font-label-sm text-label-sm text-center">
+                © 2024 Moovex Zambia. Promoting entrepreneurship in Zambia.
+            </div>
+</footer>
+</main>
+<!-- Bottom Nav Bar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full bg-surface/95 glass-header z-50 md:hidden flex justify-around items-center py-3 border-t border-outline-variant/30 px-2">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">business_center</span>
+<span class="text-[10px] font-bold">Portfolio</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-[10px] font-bold">Impact</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</nav>
+<script>
+        const menuToggle = document.getElementById('menuToggle');
+        const closeDrawer = document.getElementById('closeDrawer');
+        const navDrawer = document.getElementById('navDrawer');
+        const drawerOverlay = document.getElementById('drawerOverlay');
+
+        function openMenu() {
+            navDrawer.classList.remove('-translate-x-full');
+            drawerOverlay.classList.remove('hidden');
+            setTimeout(() => drawerOverlay.classList.add('opacity-100'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            navDrawer.classList.add('-translate-x-full');
+            drawerOverlay.classList.remove('opacity-100');
+            setTimeout(() => drawerOverlay.classList.add('hidden'), 300);
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        closeDrawer.addEventListener('click', closeMenu);
+        drawerOverlay.addEventListener('click', closeMenu);
+
+        // Simple scroll reveal for impact cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.impact-card-gradient').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

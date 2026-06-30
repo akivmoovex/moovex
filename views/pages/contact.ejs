@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('../partials/head', { title }) %></head>
+<body class="page-contact">
+<%- include('../partials/header', { activePage }) %>
+
+<main class="contact-main">
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Let's Connect</h1>
+      <p class="contact-lead">
+        Reach out to Moovex about entrepreneurship support, partnerships, or joining our connected business ecosystem in Zambia.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="contact-form-card contact-soft-shadow">
+        <form class="contact-form" method="POST" action="/contact">
+          <% if (sent) { %>
+          <div class="contact-alert contact-alert-success" role="status">Thank you. Your message has been received.</div>
+          <% } %>
+          <% if (error) { %>
+          <div class="contact-alert contact-alert-error" role="alert"><%= error %></div>
+          <% } %>
+
+          <div class="contact-form-field">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" required placeholder="Enter your full name" value="<%= form.name || '' %>" autocomplete="name" />
+          </div>
+
+          <div class="contact-form-field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" required placeholder="email@example.com" value="<%= form.email || '' %>" autocomplete="email" />
+          </div>
+
+          <div class="contact-form-field">
+            <label for="contact-phone">Phone</label>
+            <input id="contact-phone" name="phone" type="tel" placeholder="+260 ..." value="<%= form.phone || '' %>" autocomplete="tel" />
+          </div>
+
+          <div class="contact-form-field">
+            <label for="contact-organization">Organization</label>
+            <input id="contact-organization" name="organization" type="text" placeholder="Your company or entity" value="<%= form.organization || '' %>" autocomplete="organization" />
+          </div>
+
+          <div class="contact-form-field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" required placeholder="How can we help you?" rows="4"><%= form.message || '' %></textarea>
+          </div>
+
+          <button class="contact-btn" type="submit">
+            Send Message
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-info">
+    <div class="container contact-info-grid">
+      <div class="contact-details">
+        <article class="contact-detail-card">
+          <div class="contact-detail-icon contact-soft-shadow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+          </div>
+          <div>
+            <p class="contact-detail-label">Email Address</p>
+            <a href="mailto:info@moovex.org">info@moovex.org</a>
+          </div>
+        </article>
+
+        <article class="contact-detail-card">
+          <div class="contact-detail-icon contact-soft-shadow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"></path></svg>
+          </div>
+          <div>
+            <p class="contact-detail-label">Phone Number</p>
+            <p>Available on request</p>
+          </div>
+        </article>
+
+        <article class="contact-detail-card">
+          <div class="contact-detail-icon contact-soft-shadow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"></path></svg>
+          </div>
+          <div>
+            <p class="contact-detail-label">Location</p>
+            <p>Lusaka, Zambia</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="contact-map contact-soft-shadow" role="img" aria-label="Moovex location in Lusaka, Zambia">
+        <div class="contact-map-scene" aria-hidden="true">
+          <span class="contact-map-road contact-map-road-h"></span>
+          <span class="contact-map-road contact-map-road-v"></span>
+          <span class="contact-map-park"></span>
+          <span class="contact-map-pin"></span>
+        </div>
+        <div class="contact-map-overlay">
+          <div class="contact-map-badge">
+            <span class="contact-map-dot" aria-hidden="true"></span>
+            <span>Our HQ in Lusaka</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-community">
+    <div class="container">
+      <h2>Join Our Community</h2>
+      <div class="contact-community-links">
+        <a href="/ecosystem" class="contact-community-btn" aria-label="Moovex Ecosystem">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
+        </a>
+        <a href="/updates" class="contact-community-btn" aria-label="Latest Updates">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"></path></svg>
+        </a>
+        <a href="/partner" class="contact-community-btn" aria-label="Partner With Us">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-4V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zM10 4h4v2h-4V4zm6 13H8v-2h8v2z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('../partials/footer') %>
+<script src="/js/main.js"></script>
+</body>
+</html>
