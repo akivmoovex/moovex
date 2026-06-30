@@ -4405,3 +4405,70 @@ body.nav-open .site-header {
     padding-right: 0;
   }
 }
+
+/* Desktop alignment normalization — 768px+ only; mobile unchanged */
+@media (min-width: 768px) {
+  /* A. Contact — center hero with form column */
+  .page-contact .contact-hero {
+    text-align: center;
+  }
+
+  .page-contact .contact-lead {
+    max-width: 36rem;
+    margin-inline: auto;
+  }
+
+  .page-contact .contact-form-card {
+    max-width: 36rem;
+    margin-inline: auto;
+  }
+
+  /* B. Home — centered marketing sections, wider prose (hero grid unchanged) */
+  .page-home .home-mission-inner,
+  .page-home .home-ecosystem-inner {
+    max-width: 48rem;
+    text-align: center;
+  }
+
+  .page-home .home-cta-card {
+    max-width: 48rem;
+  }
+
+  /* C. Partner — widen form/donation; why heading stays centered */
+  .page-partner .partner-why h2 {
+    text-align: center;
+  }
+
+  .page-partner .partner-form-intro,
+  .page-partner .partner-form,
+  .page-partner .partner-donate-card {
+    max-width: 40rem;
+  }
+
+  /* D. About — centered editorial column, consistent left text inside */
+  .page-about .about-hero-inner,
+  .page-about .about-commitment-inner,
+  .page-about .about-mv-grid,
+  .page-about .about-do-list {
+    max-width: 48rem;
+    margin-inline: auto;
+  }
+
+  .page-about .about-what-we-do .container {
+    max-width: 48rem;
+    margin-inline: auto;
+  }
+
+  .page-about .about-do-list {
+    max-width: none;
+  }
+
+  .page-about .about-values-grid {
+    max-width: 48rem;
+  }
+
+  /* E. Updates — center feed column */
+  .page-updates .updates-container {
+    margin-inline: auto;
+  }
+}
