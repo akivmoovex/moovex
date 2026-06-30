@@ -2808,6 +2808,16 @@ body.nav-open .site-header {
   padding: 0 0 var(--stack-lg);
 }
 
+.page-impact .impact-metrics-note {
+  margin: 0 0 12px;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--on-surface-variant);
+  opacity: 0.75;
+  text-align: center;
+}
+
 .page-impact .impact-metrics-bento {
   display: flex;
   flex-direction: column;
@@ -2915,7 +2925,7 @@ body.nav-open .site-header {
 .page-impact .impact-progress-fill {
   display: block;
   height: 100%;
-  width: 25%;
+  width: 85%;
   border-radius: 999px;
   background: var(--growth-green);
 }
@@ -2969,34 +2979,30 @@ body.nav-open .site-header {
   background-position: center;
 }
 
-.page-impact .impact-story-photo-placeholder {
-  background: linear-gradient(135deg, #dce9ff 0%, #eff4ff 40%, #6cf8bb 100%);
-}
-
-.page-impact .impact-story-photo-placeholder::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, transparent 55%, rgba(30, 41, 59, 0.08) 100%);
-}
-
 .page-impact .impact-story-scene {
-  display: none;
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOHhGoUbt1mhcz1GJLoLiXFcx_Zc65tK7y_frr1sxLMZ96-zBK2moyK7EPVpCyHjOa4kyI06QnowxZBfgQvWarK7ue93OxMEapO47ceD98NHhDhkjWeVM7-8E7VtkmnnIE7_wjfvpufyed6ctkPUd3fDgHq6PjnT5Bs9L6w4HUUdT9DPH_Mrk-e2DcU1QZ-uUg75g95AyP32wM8VGe9-pa6WoMEGeYe558SQLlTbuZhB0Y4ZU3781UZ1rdTCUGyQr5JOe60GGYDVM");
 }
 
 .page-impact .impact-story-body {
   padding: 24px;
 }
 
-.page-impact .impact-story-label {
+.page-impact .impact-story-spotlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 0 0 12px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+  line-height: 20px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--on-surface-variant);
+  color: var(--trust-blue);
+}
+
+.page-impact .impact-story-star {
+  flex-shrink: 0;
+  color: var(--energy-orange);
 }
 
 .page-impact .impact-story-body h3 {
@@ -3009,7 +3015,7 @@ body.nav-open .site-header {
   margin: 0 0 24px;
   font-size: 16px;
   line-height: 24px;
-  font-style: normal;
+  font-style: italic;
   color: var(--on-surface-variant);
 }
 
@@ -3026,17 +3032,15 @@ body.nav-open .site-header {
   height: 48px;
   border-radius: 50%;
   background: var(--surface-container-low);
-  display: grid;
-  place-items: center;
   flex-shrink: 0;
   overflow: hidden;
 }
 
-.page-impact .impact-story-avatar-fallback {
-  font-family: "Outfit", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--trust-blue);
+.page-impact .impact-story-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .page-impact .impact-story-name {
